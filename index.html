@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVA Data — Todos tus datos operativos en un solo sitio</title>
+<meta name="description" content="SVA es un Hub de Datos de Planta: todos tus datos operativos en un solo sitio. Conecta cada máquina y cada sistema una sola vez, y usa esos datos donde hacen falta.">
+<link rel="icon" type="image/svg+xml" href="assets/sva-favicon.svg">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="lockup" href="#">
+      <svg viewBox="0 12 104 74" role="img" aria-label="SVA mark"><defs><mask id="ma" maskUnits="userSpaceOnUse" x="-80" y="-80" width="260" height="260"><rect x="-80" y="-80" width="260" height="260" fill="#000"></rect><g transform="rotate(-25 50 50)"><ellipse cx="45" cy="41" rx="41" ry="25.5" fill="#fff"></ellipse><ellipse cx="57.5" cy="52" rx="41" ry="25.5" fill="#000"></ellipse><ellipse cx="42.5" cy="49" rx="12.5" ry="8" fill="#000"></ellipse></g></mask><mask id="mb" maskUnits="userSpaceOnUse" x="-80" y="-80" width="260" height="260"><rect x="-80" y="-80" width="260" height="260" fill="#000"></rect><g transform="rotate(-25 50 50)"><ellipse cx="45" cy="41" rx="41" ry="25.5" fill="#fff"></ellipse><ellipse cx="57.5" cy="52" rx="41" ry="25.5" fill="#000"></ellipse><ellipse cx="42.5" cy="49" rx="12.5" ry="8" fill="#000"></ellipse></g></mask></defs><g fill="currentColor"><rect x="-80" y="-80" width="260" height="260" mask="url(#ma)"></rect><g transform="translate(15.32 -12.86) translate(50 50) rotate(-40) scale(1 -1) rotate(40) translate(-50 -50)"><rect x="-80" y="-80" width="260" height="260" mask="url(#mb)"></rect></g></g></svg>
+      <span class="wm"><b>SVA</b><span>Data</span></span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html#que-hacemos">¿Qué hacemos?</a>
+      <a class="nav-link" href="servicios.html">Servicios</a>
+      <a class="btn btn-primary nav-cta" href="mailto:lluis.barnadas@svaservice.es?subject=Quiero%20ver%20los%20datos%20de%20mi%20planta">Hablemos</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap" style="position: relative; z-index: 1;">
+    <span class="chip-eyebrow">
+      <svg viewBox="0 12 104 74" aria-hidden="true"><g fill="currentColor"><rect x="-80" y="-80" width="260" height="260" mask="url(#ma)"></rect><g transform="translate(15.32 -12.86) translate(50 50) rotate(-40) scale(1 -1) rotate(40) translate(-50 -50)"><rect x="-80" y="-80" width="260" height="260" mask="url(#mb)"></rect></g></g></svg>
+      El Hub de Datos de Planta
+    </span>
+    <div class="hero-grid">
+    <div>
+    <h1 class="hero-h1">Todos&nbsp;tus&nbsp;datos <span id="rotor" class="rotor">operativos</span><br>en un solo sitio.</h1>
+    <div class="hero-lead">
+      <p class="lead">En tiempo real, con histórico, y lista para decidir.</p>
+      <p class="body-p" style="margin-top: 22px; max-width: 520px;">Conecta cada máquina y cada sistema <b>una sola vez</b>, y usa esos datos donde hacen falta: en la pantalla de planta, en dashboards, Excel, la IA. Un <b>Hub de Datos de Planta</b>, un sitio, todos tus datos, ordenados.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="servicios.html#empezamos">Cómo empezamos</a>
+        <a class="btn btn-ghost" href="#problema">Ver por qué</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="diagram hero-dia">
+      <svg viewBox="-434 -367 856 674" role="img" aria-label="Planta isométrica: tornos CNC y control de calidad conectados a un mini-PC industrial que envía los datos al hub SVA; el MES se conecta al hub">
+<path d="M 227.2 -131.2 L -199.5 115.2" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M 49.9 -28.8 L 221.7 -128.0" fill="none" stroke="var(--line)" stroke-width="2.9" stroke-opacity="1.0" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M 92.8 -192.8 L 213.4 -123.2" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M -54.0 -108.0 L 66.5 -38.4" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M -270.2 16.8 L -149.6 86.4" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M 297.9 -32.8 L 177.4 -102.4" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M 137.2 60.0 L 16.6 -9.6" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><path d="M -79.0 184.8 L -199.5 115.2" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-opacity="0.8" stroke-linecap="round" stroke-dasharray="0.1 8"/><ellipse cx="51.3" cy="-215.0" rx="100" ry="58" fill="var(--tint)"/><polygon points="41.6,-281.9 121.9,-235.5 61.0,-200.3 -19.4,-246.7" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="121.9,-211.2 61.0,-176.0 61.0,-200.3 121.9,-235.5" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-19.4,-222.4 61.0,-176.0 61.0,-200.3 -19.4,-246.7" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="51.5,-259.9 68.5,-250.1 54.9,-242.3 38.0,-252.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="68.5,-238.9 54.9,-231.0 54.9,-242.3 68.5,-250.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="38.0,-240.8 54.9,-231.0 54.9,-242.3 38.0,-252.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="20.0,-323.9 28.3,-319.1 20.0,-314.3 11.6,-319.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="28.3,-260.2 20.0,-255.4 20.0,-314.3 28.3,-319.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="11.6,-260.2 20.0,-255.4 20.0,-314.3 11.6,-319.1" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="83.4,-287.3 91.7,-282.5 83.4,-277.7 75.1,-282.5" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="91.7,-223.5 83.4,-218.7 83.4,-277.7 91.7,-282.5" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="75.1,-223.5 83.4,-218.7 83.4,-277.7 75.1,-282.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="17.5,-336.7 96.4,-291.1 85.6,-284.8 6.7,-330.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="96.4,-281.1 85.6,-274.8 85.6,-284.8 96.4,-291.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="6.7,-320.4 85.6,-274.8 85.6,-284.8 6.7,-330.4" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><line x1="54.0" y1="-299.5" x2="54.0" y2="-255.7" stroke="var(--icon)" stroke-width="2.4"/><circle cx="54.0" cy="-255.7" r="3.8" fill="var(--icon)"/><g transform="translate(221.7,-153.6)"><ellipse cx="0" cy="0" rx="83" ry="48" fill="var(--tint)" opacity=".55"/><path d="M-60.7,-16.7 L-60.7,0 A60.7,35.1 0 0 0 60.7,0 L60.7,-16.7" fill="var(--band)"/><ellipse cx="0" cy="-16.7" rx="60.7" ry="35.1" fill="var(--band)" stroke="var(--band)"/><g transform="translate(0,-16.7) scale(0.82,0.47) translate(-52,-49)"><g fill="var(--band-text)"><rect x="-80" y="-80" width="260" height="260" mask="url(#ma)"/><g transform="translate(15.32 -12.86) translate(50 50) rotate(-40) scale(1 -1) rotate(40) translate(-50 -50)"><rect x="-80" y="-80" width="260" height="260" mask="url(#mb)"/></g></g></g></g><ellipse cx="-81.8" cy="-125.4" rx="104" ry="60" fill="var(--tint)"/><polygon points="-25.8,-205.8 39.6,-168.0 -128.9,-70.8 -194.3,-108.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="39.6,-159.5 -128.9,-62.2 -128.9,-70.8 39.6,-168.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-194.3,-100.0 -128.9,-62.2 -128.9,-70.8 -194.3,-108.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><path d="M-91.5,-163.7 L-91.5,-248.8 L-47.1,-223.2 L-33.3,-171.2 L-33.3,-130.1 Z" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round"/><polygon points="22.2,-162.1 -33.3,-130.1 -33.3,-171.2 22.2,-203.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="22.2,-203.2 -33.3,-171.2 -47.1,-223.2 8.3,-255.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="15.2,-205.2 -29.7,-179.2 -40.5,-219.9 4.4,-245.8" fill="var(--glass)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><line x1="14.7" y1="-216.9" x2="10.3" y2="-233.5" stroke="var(--icon)" stroke-width="3" stroke-linecap="round"/><polygon points="-36.0,-280.8 8.3,-255.2 -47.1,-223.2 -91.5,-248.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-91.5,-229.1 -72.1,-217.9 -108.1,-197.1 -127.5,-208.3" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-72.1,-217.9 -108.1,-197.1 -69.3,-135.2 -33.3,-156.0" fill="var(--line)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><ellipse cx="0" cy="0" rx="21" ry="14" fill="var(--tint)" opacity=".9" transform="translate(-70.7,-176.5) rotate(-30)"/><polygon points="-33.3,-130.1 -69.3,-109.3 -69.3,-135.2 -33.3,-156.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-93.1,-249.0 -77.9,-240.2 -97.3,-229.0 -112.5,-237.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-77.9,-217.4 -97.3,-206.2 -97.3,-229.0 -77.9,-240.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-112.5,-215.0 -97.3,-206.2 -97.3,-229.0 -112.5,-237.8" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-185.7,-109.3 -127.5,-75.7 -127.5,-160.8 -185.7,-194.4" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-69.3,-109.3 -127.5,-75.7 -127.5,-160.8 -69.3,-194.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-127.5,-228.0 -69.3,-194.4 -127.5,-160.8 -185.7,-194.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-80.9,-129.3 -111.4,-111.7 -111.4,-147.6 -80.9,-165.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-83.4,-145.5 -97.3,-137.5 -97.3,-150.3 -83.4,-158.3" fill="var(--band)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><circle cx="-100.9" cy="-147.0" r="1.7" fill="var(--icon)"/><circle cx="-106.1" cy="-144.0" r="1.7" fill="var(--icon)"/><circle cx="-102.8" cy="-136.8" r="3.2" fill="var(--band)"/><circle cx="-102.8" cy="-136.8" r="1.2" fill="var(--band-text)"/><circle cx="-84.5" cy="-138.2" r="1.4" fill="var(--icon)"/><circle cx="-89.8" cy="-135.2" r="1.4" fill="var(--icon)"/><circle cx="-95.1" cy="-132.1" r="1.4" fill="var(--icon)"/><circle cx="-100.3" cy="-129.1" r="1.4" fill="var(--icon)"/><circle cx="-84.5" cy="-132.4" r="1.4" fill="var(--icon)"/><circle cx="-89.8" cy="-129.4" r="1.4" fill="var(--icon)"/><circle cx="-95.1" cy="-126.4" r="1.4" fill="var(--icon)"/><circle cx="-100.3" cy="-123.3" r="1.4" fill="var(--icon)"/><circle cx="-176.8" cy="-115.1" r="1.3" fill="var(--line)"/><circle cx="-169.0" cy="-110.7" r="1.3" fill="var(--line)"/><circle cx="-161.3" cy="-106.2" r="1.3" fill="var(--line)"/><circle cx="-153.5" cy="-101.7" r="1.3" fill="var(--line)"/><circle cx="-145.8" cy="-97.2" r="1.3" fill="var(--line)"/><circle cx="-176.8" cy="-122.4" r="1.3" fill="var(--line)"/><circle cx="-169.0" cy="-118.0" r="1.3" fill="var(--line)"/><circle cx="-161.3" cy="-113.5" r="1.3" fill="var(--line)"/><circle cx="-153.5" cy="-109.0" r="1.3" fill="var(--line)"/><circle cx="-145.8" cy="-104.5" r="1.3" fill="var(--line)"/><circle cx="-176.8" cy="-129.7" r="1.3" fill="var(--line)"/><circle cx="-169.0" cy="-125.2" r="1.3" fill="var(--line)"/><circle cx="-161.3" cy="-120.8" r="1.3" fill="var(--line)"/><circle cx="-153.5" cy="-116.3" r="1.3" fill="var(--line)"/><circle cx="-145.8" cy="-111.8" r="1.3" fill="var(--line)"/><circle cx="-176.8" cy="-137.0" r="1.3" fill="var(--line)"/><circle cx="-169.0" cy="-132.5" r="1.3" fill="var(--line)"/><circle cx="-161.3" cy="-128.1" r="1.3" fill="var(--line)"/><circle cx="-153.5" cy="-123.6" r="1.3" fill="var(--line)"/><circle cx="-145.8" cy="-119.1" r="1.3" fill="var(--line)"/><ellipse cx="346.4" cy="-6.2" rx="89" ry="51" fill="var(--tint)"/><polygon points="335.3,-43.2 393.5,-9.6 357.5,11.2 299.3,-22.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="393.5,-3.2 357.5,17.6 357.5,11.2 393.5,-9.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="299.3,-16.0 357.5,17.6 357.5,11.2 299.3,-22.4" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="343.6,-54.6 355.8,-47.6 346.4,-42.2 334.2,-49.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="355.8,-16.0 346.4,-10.5 346.4,-42.2 355.8,-47.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="334.2,-17.6 346.4,-10.5 346.4,-42.2 334.2,-49.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="311.5,-139.4 397.4,-89.8 392.4,-86.9 306.5,-136.5" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="397.4,-27.4 392.4,-24.6 392.4,-86.9 397.4,-89.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="306.5,-74.2 392.4,-24.6 392.4,-86.9 306.5,-136.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="310.4,-125.7 388.5,-80.6 388.5,-88.8 310.4,-133.9" fill="var(--band)" stroke="var(--icon)" stroke-width="0" stroke-linejoin="round" /><polygon points="310.4,-76.2 388.5,-31.1 388.5,-77.3 310.4,-122.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><polygon points="315.4,-110.7 379.1,-73.9 379.1,-79.7 315.4,-116.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><polygon points="315.4,-100.0 352.8,-78.4 352.8,-84.2 315.4,-105.8" fill="var(--tint)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><polygon points="315.4,-89.4 366.6,-59.8 366.6,-65.6 315.4,-95.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><polygon points="315.4,-78.8 343.1,-62.8 343.1,-68.5 315.4,-84.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><text x="318.7" y="-123.7" font-size="12" font-weight="600" fill="var(--band-text)" transform="matrix(0.866,0.5,0,1,0,0)" transform-origin="318.7 -123.7" style="font-family: var(--sans);">MES</text><ellipse cx="12.5" cy="-5.4" rx="67" ry="39" fill="var(--tint)"/><polygon points="0.0,-64.2 66.5,-25.8 24.9,-1.8 -41.6,-40.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="66.5,0.0 24.9,24.0 24.9,-1.8 66.5,-25.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-41.6,-14.4 24.9,24.0 24.9,-1.8 -41.6,-40.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="0.0,-72.5 4.4,-70.0 -29.4,-50.4 -33.8,-53.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="4.4,-57.2 -29.4,-37.7 -29.4,-50.4 4.4,-70.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-33.8,-40.2 -29.4,-37.7 -29.4,-50.4 -33.8,-53.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="8.6,-67.6 13.0,-65.0 -20.8,-45.5 -25.2,-48.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="13.0,-52.2 -20.8,-32.7 -20.8,-45.5 13.0,-65.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-25.2,-35.3 -20.8,-32.7 -20.8,-45.5 -25.2,-48.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="17.2,-62.6 21.6,-60.0 -12.2,-40.5 -16.6,-43.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="21.6,-47.3 -12.2,-27.8 -12.2,-40.5 21.6,-60.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-16.6,-30.3 -12.2,-27.8 -12.2,-40.5 -16.6,-43.1" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="25.8,-57.6 30.2,-55.1 -3.6,-35.6 -8.0,-38.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="30.2,-42.3 -3.6,-22.8 -3.6,-35.6 30.2,-55.1" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-8.0,-25.4 -3.6,-22.8 -3.6,-35.6 -8.0,-38.1" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="34.4,-52.7 38.8,-50.1 5.0,-30.6 0.6,-33.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="38.8,-37.4 5.0,-17.8 5.0,-30.6 38.8,-50.1" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="0.6,-20.4 5.0,-17.8 5.0,-30.6 0.6,-33.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="43.0,-47.7 47.4,-45.2 13.6,-25.6 9.1,-28.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="47.4,-32.4 13.6,-12.9 13.6,-25.6 47.4,-45.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="9.1,-15.4 13.6,-12.9 13.6,-25.6 9.1,-28.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="51.5,-42.8 56.0,-40.2 22.2,-20.7 17.7,-23.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="56.0,-27.4 22.2,-7.9 22.2,-20.7 56.0,-40.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="17.7,-10.5 22.2,-7.9 22.2,-20.7 17.7,-23.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><line x1="55.4" y1="-38.0" x2="55.4" y2="-78.4" stroke="var(--icon)" stroke-width="3.4" stroke-linecap="round"/><circle cx="55.4" cy="-78.4" r="3.2" fill="var(--icon)"/><line x1="44.3" y1="-31.6" x2="44.3" y2="-72.0" stroke="var(--icon)" stroke-width="3.4" stroke-linecap="round"/><circle cx="44.3" cy="-72.0" r="3.2" fill="var(--icon)"/><circle cx="-33.8" cy="-22.7" r="1.9" fill="var(--band)"/><circle cx="-26.1" cy="-18.2" r="1.9" fill="var(--band)"/><polygon points="1.4,1.3 18.0,10.9 18.0,4.2 1.4,-5.4" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><ellipse cx="-297.9" cy="-0.6" rx="104" ry="60" fill="var(--tint)"/><polygon points="-241.9,-81.0 -176.5,-43.2 -345.0,54.0 -410.4,16.3" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-176.5,-34.7 -345.0,62.6 -345.0,54.0 -176.5,-43.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-410.4,24.8 -345.0,62.6 -345.0,54.0 -410.4,16.3" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><path d="M-307.6,-38.9 L-307.6,-124.0 L-263.3,-98.4 L-249.4,-46.4 L-249.4,-5.3 Z" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round"/><polygon points="-194.0,-37.3 -249.4,-5.3 -249.4,-46.4 -194.0,-78.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-194.0,-78.4 -249.4,-46.4 -263.3,-98.4 -207.8,-130.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-200.9,-80.4 -245.8,-54.4 -256.6,-95.1 -211.7,-121.0" fill="var(--glass)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><line x1="-201.5" y1="-92.1" x2="-205.9" y2="-108.7" stroke="var(--icon)" stroke-width="3" stroke-linecap="round"/><polygon points="-252.2,-156.0 -207.8,-130.4 -263.3,-98.4 -307.6,-124.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-307.6,-104.3 -288.2,-93.1 -324.2,-72.3 -343.6,-83.5" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-288.2,-93.1 -324.2,-72.3 -285.4,-10.4 -249.4,-31.2" fill="var(--line)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><ellipse cx="0" cy="0" rx="21" ry="14" fill="var(--tint)" opacity=".9" transform="translate(-286.8,-51.7) rotate(-30)"/><polygon points="-249.4,-5.3 -285.4,15.5 -285.4,-10.4 -249.4,-31.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-309.3,-124.2 -294.0,-115.4 -313.4,-104.2 -328.7,-113.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-294.0,-92.6 -313.4,-81.4 -313.4,-104.2 -294.0,-115.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-328.7,-90.2 -313.4,-81.4 -313.4,-104.2 -328.7,-113.0" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-401.8,15.5 -343.6,49.1 -343.6,-36.0 -401.8,-69.6" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-285.4,15.5 -343.6,49.1 -343.6,-36.0 -285.4,-69.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-343.6,-103.2 -285.4,-69.6 -343.6,-36.0 -401.8,-69.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-297.1,-4.5 -327.6,13.1 -327.6,-22.8 -297.1,-40.4" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-299.6,-20.7 -313.4,-12.7 -313.4,-25.5 -299.6,-33.5" fill="var(--band)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><circle cx="-317.0" cy="-22.2" r="1.7" fill="var(--icon)"/><circle cx="-322.3" cy="-19.2" r="1.7" fill="var(--icon)"/><circle cx="-319.0" cy="-12.0" r="3.2" fill="var(--band)"/><circle cx="-319.0" cy="-12.0" r="1.2" fill="var(--band-text)"/><circle cx="-300.7" cy="-13.4" r="1.4" fill="var(--icon)"/><circle cx="-305.9" cy="-10.4" r="1.4" fill="var(--icon)"/><circle cx="-311.2" cy="-7.3" r="1.4" fill="var(--icon)"/><circle cx="-316.5" cy="-4.3" r="1.4" fill="var(--icon)"/><circle cx="-300.7" cy="-7.6" r="1.4" fill="var(--icon)"/><circle cx="-305.9" cy="-4.6" r="1.4" fill="var(--icon)"/><circle cx="-311.2" cy="-1.6" r="1.4" fill="var(--icon)"/><circle cx="-316.5" cy="1.5" r="1.4" fill="var(--icon)"/><circle cx="-393.0" cy="9.7" r="1.3" fill="var(--line)"/><circle cx="-385.2" cy="14.1" r="1.3" fill="var(--line)"/><circle cx="-377.4" cy="18.6" r="1.3" fill="var(--line)"/><circle cx="-369.7" cy="23.1" r="1.3" fill="var(--line)"/><circle cx="-361.9" cy="27.6" r="1.3" fill="var(--line)"/><circle cx="-393.0" cy="2.4" r="1.3" fill="var(--line)"/><circle cx="-385.2" cy="6.8" r="1.3" fill="var(--line)"/><circle cx="-377.4" cy="11.3" r="1.3" fill="var(--line)"/><circle cx="-369.7" cy="15.8" r="1.3" fill="var(--line)"/><circle cx="-361.9" cy="20.3" r="1.3" fill="var(--line)"/><circle cx="-393.0" cy="-4.9" r="1.3" fill="var(--line)"/><circle cx="-385.2" cy="-0.4" r="1.3" fill="var(--line)"/><circle cx="-377.4" cy="4.0" r="1.3" fill="var(--line)"/><circle cx="-369.7" cy="8.5" r="1.3" fill="var(--line)"/><circle cx="-361.9" cy="13.0" r="1.3" fill="var(--line)"/><circle cx="-393.0" cy="-12.2" r="1.3" fill="var(--line)"/><circle cx="-385.2" cy="-7.7" r="1.3" fill="var(--line)"/><circle cx="-377.4" cy="-3.3" r="1.3" fill="var(--line)"/><circle cx="-369.7" cy="1.2" r="1.3" fill="var(--line)"/><circle cx="-361.9" cy="5.7" r="1.3" fill="var(--line)"/><ellipse cx="170.4" cy="77.8" rx="104" ry="60" fill="var(--tint)"/><polygon points="226.4,-2.6 291.8,35.2 123.3,132.4 57.9,94.7" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="291.8,43.7 123.3,141.0 123.3,132.4 291.8,35.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="57.9,103.2 123.3,141.0 123.3,132.4 57.9,94.7" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><path d="M160.7,39.5 L160.7,-45.6 L205.1,-20.0 L218.9,32.0 L218.9,73.1 Z" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round"/><polygon points="274.4,41.1 218.9,73.1 218.9,32.0 274.4,0.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="274.4,0.0 218.9,32.0 205.1,-20.0 260.5,-52.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="267.4,-2.0 222.5,24.0 211.7,-16.7 256.6,-42.6" fill="var(--glass)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><line x1="266.9" y1="-13.7" x2="262.4" y2="-30.3" stroke="var(--icon)" stroke-width="3" stroke-linecap="round"/><polygon points="216.2,-77.6 260.5,-52.0 205.1,-20.0 160.7,-45.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="160.7,-25.9 180.1,-14.7 144.1,6.1 124.7,-5.1" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="180.1,-14.7 144.1,6.1 182.9,68.0 218.9,47.2" fill="var(--line)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><ellipse cx="0" cy="0" rx="21" ry="14" fill="var(--tint)" opacity=".9" transform="translate(181.5,26.7) rotate(-30)"/><polygon points="218.9,73.1 182.9,93.9 182.9,68.0 218.9,47.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="159.1,-45.8 174.3,-37.0 154.9,-25.8 139.7,-34.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="174.3,-14.2 154.9,-3.0 154.9,-25.8 174.3,-37.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="139.7,-11.8 154.9,-3.0 154.9,-25.8 139.7,-34.6" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="66.5,93.9 124.7,127.5 124.7,42.4 66.5,8.8" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="182.9,93.9 124.7,127.5 124.7,42.4 182.9,8.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="124.7,-24.8 182.9,8.8 124.7,42.4 66.5,8.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="171.3,73.9 140.8,91.5 140.8,55.6 171.3,38.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="168.8,57.7 154.9,65.7 154.9,52.9 168.8,44.9" fill="var(--band)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><circle cx="151.3" cy="56.2" r="1.7" fill="var(--icon)"/><circle cx="146.0" cy="59.2" r="1.7" fill="var(--icon)"/><circle cx="149.4" cy="66.4" r="3.2" fill="var(--band)"/><circle cx="149.4" cy="66.4" r="1.2" fill="var(--band-text)"/><circle cx="167.7" cy="65.0" r="1.4" fill="var(--icon)"/><circle cx="162.4" cy="68.0" r="1.4" fill="var(--icon)"/><circle cx="157.1" cy="71.1" r="1.4" fill="var(--icon)"/><circle cx="151.9" cy="74.1" r="1.4" fill="var(--icon)"/><circle cx="167.7" cy="70.8" r="1.4" fill="var(--icon)"/><circle cx="162.4" cy="73.8" r="1.4" fill="var(--icon)"/><circle cx="157.1" cy="76.8" r="1.4" fill="var(--icon)"/><circle cx="151.9" cy="79.9" r="1.4" fill="var(--icon)"/><circle cx="75.4" cy="88.1" r="1.3" fill="var(--line)"/><circle cx="83.1" cy="92.5" r="1.3" fill="var(--line)"/><circle cx="90.9" cy="97.0" r="1.3" fill="var(--line)"/><circle cx="98.7" cy="101.5" r="1.3" fill="var(--line)"/><circle cx="106.4" cy="106.0" r="1.3" fill="var(--line)"/><circle cx="75.4" cy="80.8" r="1.3" fill="var(--line)"/><circle cx="83.1" cy="85.2" r="1.3" fill="var(--line)"/><circle cx="90.9" cy="89.7" r="1.3" fill="var(--line)"/><circle cx="98.7" cy="94.2" r="1.3" fill="var(--line)"/><circle cx="106.4" cy="98.7" r="1.3" fill="var(--line)"/><circle cx="75.4" cy="73.5" r="1.3" fill="var(--line)"/><circle cx="83.1" cy="78.0" r="1.3" fill="var(--line)"/><circle cx="90.9" cy="82.4" r="1.3" fill="var(--line)"/><circle cx="98.7" cy="86.9" r="1.3" fill="var(--line)"/><circle cx="106.4" cy="91.4" r="1.3" fill="var(--line)"/><circle cx="75.4" cy="66.2" r="1.3" fill="var(--line)"/><circle cx="83.1" cy="70.7" r="1.3" fill="var(--line)"/><circle cx="90.9" cy="75.1" r="1.3" fill="var(--line)"/><circle cx="98.7" cy="79.6" r="1.3" fill="var(--line)"/><circle cx="106.4" cy="84.1" r="1.3" fill="var(--line)"/><ellipse cx="-45.7" cy="202.6" rx="104" ry="60" fill="var(--tint)"/><polygon points="10.3,122.2 75.7,160.0 -92.8,257.2 -158.2,219.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="75.7,168.5 -92.8,265.8 -92.8,257.2 75.7,160.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-158.2,228.0 -92.8,265.8 -92.8,257.2 -158.2,219.5" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><path d="M-55.4,164.3 L-55.4,79.2 L-11.1,104.8 L2.8,156.8 L2.8,197.9 Z" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round"/><polygon points="58.2,165.9 2.8,197.9 2.8,156.8 58.2,124.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="58.2,124.8 2.8,156.8 -11.1,104.8 44.3,72.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="51.3,122.8 6.4,148.8 -4.4,108.1 40.5,82.2" fill="var(--glass)" stroke="var(--icon)" stroke-width="1.2" stroke-linejoin="round" /><line x1="50.7" y1="111.1" x2="46.3" y2="94.5" stroke="var(--icon)" stroke-width="3" stroke-linecap="round"/><polygon points="0.0,47.2 44.3,72.8 -11.1,104.8 -55.4,79.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-55.4,98.9 -36.0,110.1 -72.1,130.9 -91.5,119.7" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-36.0,110.1 -72.1,130.9 -33.3,192.8 2.8,172.0" fill="var(--line)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><ellipse cx="0" cy="0" rx="21" ry="14" fill="var(--tint)" opacity=".9" transform="translate(-34.6,151.5) rotate(-30)"/><polygon points="2.8,197.9 -33.3,218.7 -33.3,192.8 2.8,172.0" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-57.1,79.0 -41.8,87.8 -61.2,99.0 -76.5,90.2" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-41.8,110.6 -61.2,121.8 -61.2,99.0 -41.8,87.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-76.5,113.0 -61.2,121.8 -61.2,99.0 -76.5,90.2" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-149.6,218.7 -91.5,252.3 -91.5,167.2 -149.6,133.6" fill="var(--tint)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-33.3,218.7 -91.5,252.3 -91.5,167.2 -33.3,133.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-91.5,100.0 -33.3,133.6 -91.5,167.2 -149.6,133.6" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-44.9,198.7 -75.4,216.3 -75.4,180.4 -44.9,162.8" fill="var(--card)" stroke="var(--icon)" stroke-width="1.6" stroke-linejoin="round" /><polygon points="-47.4,182.5 -61.2,190.5 -61.2,177.7 -47.4,169.7" fill="var(--band)" stroke="var(--icon)" stroke-width="1" stroke-linejoin="round" /><circle cx="-64.8" cy="181.0" r="1.7" fill="var(--icon)"/><circle cx="-70.1" cy="184.0" r="1.7" fill="var(--icon)"/><circle cx="-66.8" cy="191.2" r="3.2" fill="var(--band)"/><circle cx="-66.8" cy="191.2" r="1.2" fill="var(--band-text)"/><circle cx="-48.5" cy="189.8" r="1.4" fill="var(--icon)"/><circle cx="-53.8" cy="192.8" r="1.4" fill="var(--icon)"/><circle cx="-59.0" cy="195.9" r="1.4" fill="var(--icon)"/><circle cx="-64.3" cy="198.9" r="1.4" fill="var(--icon)"/><circle cx="-48.5" cy="195.6" r="1.4" fill="var(--icon)"/><circle cx="-53.8" cy="198.6" r="1.4" fill="var(--icon)"/><circle cx="-59.0" cy="201.6" r="1.4" fill="var(--icon)"/><circle cx="-64.3" cy="204.7" r="1.4" fill="var(--icon)"/><circle cx="-140.8" cy="212.9" r="1.3" fill="var(--line)"/><circle cx="-133.0" cy="217.3" r="1.3" fill="var(--line)"/><circle cx="-125.3" cy="221.8" r="1.3" fill="var(--line)"/><circle cx="-117.5" cy="226.3" r="1.3" fill="var(--line)"/><circle cx="-109.7" cy="230.8" r="1.3" fill="var(--line)"/><circle cx="-140.8" cy="205.6" r="1.3" fill="var(--line)"/><circle cx="-133.0" cy="210.0" r="1.3" fill="var(--line)"/><circle cx="-125.3" cy="214.5" r="1.3" fill="var(--line)"/><circle cx="-117.5" cy="219.0" r="1.3" fill="var(--line)"/><circle cx="-109.7" cy="223.5" r="1.3" fill="var(--line)"/><circle cx="-140.8" cy="198.3" r="1.3" fill="var(--line)"/><circle cx="-133.0" cy="202.8" r="1.3" fill="var(--line)"/><circle cx="-125.3" cy="207.2" r="1.3" fill="var(--line)"/><circle cx="-117.5" cy="211.7" r="1.3" fill="var(--line)"/><circle cx="-109.7" cy="216.2" r="1.3" fill="var(--line)"/><circle cx="-140.8" cy="191.0" r="1.3" fill="var(--line)"/><circle cx="-133.0" cy="195.5" r="1.3" fill="var(--line)"/><circle cx="-125.3" cy="199.9" r="1.3" fill="var(--line)"/><circle cx="-117.5" cy="204.4" r="1.3" fill="var(--line)"/><circle cx="-109.7" cy="208.9" r="1.3" fill="var(--line)"/>
+
+</svg>
+    </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="pillars">
+      <div class="pillar">
+        <div class="t">Sin tocar nada</div>
+        <div class="d">Extraemos los datos de las máquinas y los sistemas que ya tienes. No cambiamos tu forma de trabajar.</div>
+      </div>
+      <div class="pillar">
+        <div class="t">Todos tus datos, en un solo sitio</div>
+      </div>
+      <div class="pillar">
+        <div class="t">Toma decisiones, cada mes. Mide los cambios en los procesos, busca órdenes defectuosas, relaciona defectos de calidad con sensores…</div>
+        <div class="d">Cada mes, con los datos delante, te ayudamos a extraer el valor de tus datos.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= QUOTE ================= -->
+<section style="padding: 72px 0;">
+  <div class="wrap">
+    <p class="quote">«Los sistemas de control hacen funcionar las máquinas. Nosotros hacemos funcionar las decisiones.»</p>
+  </div>
+</section>
+
+<!-- ================= PROBLEMA ================= -->
+<section id="problema">
+  <div class="wrap">
+    <p class="eyebrow">El problema</p>
+    <h2 style="margin-top: 10px; max-width: 720px;">Diferentes softwares para cada departamento: ERP, MES, MOM, SCADA, mantenimiento.</h2>
+    <p class="body-p" style="margin-top: 14px;">Cada software tiene su función, pero la analítica nunca se ha hecho dentro de los softwares. Hay que extraer los datos, ordenarlos, unirlos — si no, la información se pierde en un exporte, un Excel, la memoria de alguien. Finanzas dice una cosa, producción otra, mantenimiento otra, calidad otra — y nadie sabe cuál es la verdad.</p>
+
+    <div class="ba">
+      <div class="diagram">
+        <div class="ba-label">Hoy</div>
+        <svg viewBox="0 0 420 430" role="img" aria-label="Sistemas conectados punto a punto, un lío de conexiones">
+          <path d="M70,56 L75,180" class="wire-dot"/>
+          <path d="M70,56 L205,172" class="wire-dot"/>
+          <path d="M210,56 L80,185" class="wire-dot"/>
+          <path d="M210,56 L335,180" class="wire-dot"/>
+          <path d="M350,56 L215,175" class="wire-dot"/>
+          <path d="M350,56 L340,178" class="wire-dot"/>
+          <path d="M70,372 L72,220" class="wire-dot"/>
+          <path d="M70,372 L200,218" class="wire-dot"/>
+          <path d="M210,372 L338,218" class="wire-dot"/>
+          <path d="M210,372 L82,222" class="wire-dot"/>
+          <path d="M350,372 L212,220" class="wire-dot"/>
+          <path d="M350,372 L345,220" class="wire-dot"/>
+          <rect x="10" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="70" y="39" font-size="13" text-anchor="middle" class="lbl">ERP</text>
+          <rect x="150" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="210" y="39" font-size="13" text-anchor="middle" class="lbl">MES</text>
+          <rect x="290" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="350" y="39" font-size="13" text-anchor="middle" class="lbl">Excels</text>
+          <g class="icon-line">
+            <path d="M56,196 a10,10 0 0 1 2,-19.8 a13,13 0 0 1 25,-3 a11,11 0 0 1 8,20.5 z"/>
+            <ellipse cx="207" cy="184" rx="14" ry="6"/>
+            <path d="M193,184 v22 a14,6 0 0 0 28,0 v-22"/>
+            <path d="M193,195 a14,6 0 0 0 28,0"/>
+            <rect x="326" y="176" width="34" height="12" rx="3"/>
+            <rect x="326" y="194" width="34" height="12" rx="3"/>
+          </g>
+          <rect x="10" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="70" y="399" font-size="13" text-anchor="middle" class="lbl">Máquinas</text>
+          <rect x="150" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="210" y="399" font-size="13" text-anchor="middle" class="lbl">Sensores</text>
+          <rect x="290" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="350" y="399" font-size="13" text-anchor="middle" class="lbl">Calidad</text>
+        </svg>
+      </div>
+
+      <svg class="ba-arrow" viewBox="0 0 40 60" aria-hidden="true">
+        <path d="M8,8 L32,30 L8,52" fill="none" stroke="var(--muted)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <div class="diagram">
+        <div class="ba-label">Con SVA</div>
+        <svg viewBox="0 0 420 430" role="img" aria-label="Todos los sistemas conectados a una sola capa">
+          <line x1="210" y1="56" x2="210" y2="185" class="wire"/>
+          <line x1="210" y1="245" x2="210" y2="372" class="wire"/>
+          <path d="M130,34 L165,34 L165,185" class="wire"/>
+          <path d="M290,34 L255,34 L255,185" class="wire"/>
+          <path d="M130,394 L165,394 L165,245" class="wire"/>
+          <path d="M290,394 L255,394 L255,245" class="wire"/>
+          <rect x="10" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="70" y="39" font-size="13" text-anchor="middle" class="lbl">ERP</text>
+          <rect x="150" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="210" y="39" font-size="13" text-anchor="middle" class="lbl">MES</text>
+          <rect x="290" y="12" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="350" y="39" font-size="13" text-anchor="middle" class="lbl">Calidad</text>
+          <rect x="10" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="70" y="399" font-size="13" text-anchor="middle" class="lbl">Máquinas</text>
+          <rect x="150" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="210" y="399" font-size="13" text-anchor="middle" class="lbl">Sensores</text>
+          <rect x="290" y="372" width="120" height="44" rx="8" class="chip-r"/>
+          <text x="350" y="399" font-size="13" text-anchor="middle" class="lbl">Robots</text>
+          <rect x="110" y="185" width="200" height="60" rx="9" class="chip-solid"/>
+          <text x="210" y="212" font-size="18" text-anchor="middle" class="t-inv">SVA</text>
+          <text x="210" y="232" font-size="11.5" text-anchor="middle" class="t-inv-sub">una sola capa, tuya</text>
+        </svg>
+      </div>
+    </div>
+
+    <p class="caption"><b>Conecta una vez. Decide siempre.</b> Cada fuente se conecta una sola vez a la capa — y cualquier pregunta se responde cruzándolas todas.</p>
+  </div>
+</section>
+
+<!-- ================= CREEMOS ================= -->
+<section id="creemos">
+  <div class="wrap">
+    <p class="eyebrow">En lo que creemos</p>
+    <div class="beliefs">
+      <div class="belief">
+        <div class="t">Visualizar lo que ocurre en tu planta puede abrirte los ojos.</div>
+        <div class="d">Tu gestión sabe lo que debería pasar; tus máquinas, lo que pasa.</div>
+      </div>
+      <div class="belief">
+        <div class="t">Tus datos ya existen. Están encerrados.</div>
+        <div class="d">Cada ERP, cada MES, MOM, SCADA intentan encerrarte. ¿Por qué no un sitio donde acceder a todo?</div>
+      </div>
+      <div class="belief">
+        <div class="t">Un panel de números no gana dinero.</div>
+        <div class="d">Una decisión a tiempo, sí. Por eso no entregamos un dashboard y nos vamos: lo trabajamos contigo, cada mes — somos tu equipo de analítica.</div>
+      </div>
+      <div class="belief">
+        <div class="t">Medir no debería ser un proyecto.</div>
+        <div class="d">Nada de implantaciones de meses: en marcha en semanas, sin parar producción y sin cambiar cómo trabaja tu gente.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUÉ HACEMOS ================= -->
+<section id="que-hacemos">
+  <div class="wrap">
+    <p class="eyebrow">Qué hacemos</p>
+    <h2 style="margin-top: 10px; max-width: 760px;">Capturamos los datos de tu empresa y los convertimos en decisiones.</h2>
+    <p class="body-p" style="margin-top: 14px;">Tu fábrica ya genera datos por el simple hecho de trabajar. No son una sola cosa: son cuatro familias, y cada una se captura distinto, se guarda distinto y responde a una pregunta distinta. Mezclarlas es donde descarrila la mayoría de proyectos de datos — en la primera reunión:</p>
+
+    <div class="datos">
+      <div class="dato">
+        <span class="n">01 · Máquina (MDE)</span>
+        <div class="t">Lo que hace la máquina</div>
+        <div class="d">Ciclos, estados, tiempos de marcha, paros, velocidades, códigos de alarma.</div>
+        <div class="src">Sale del control (CNC, PLC), de señales digitales o de un servidor OPC UA — sin tocar nada.</div>
+      </div>
+      <div class="dato">
+        <span class="n">02 · Operación (BDE)</span>
+        <div class="t">Lo que se está fabricando</div>
+        <div class="d">Estado de las órdenes, fichaje de operario, consumo de material, motivos de paro.</div>
+        <div class="src">Sale del terminal de planta, del lector de códigos — o del apunte del operario.</div>
+      </div>
+      <div class="dato">
+        <span class="n">03 · Proceso</span>
+        <div class="t">En qué condiciones</div>
+        <div class="d">Temperaturas, presiones, pares de apriete, caudales, dimensiones.</div>
+        <div class="src">Sale de sensores, equipos de medida y galgas en línea — los que ya tienes o los que añadimos.</div>
+      </div>
+      <div class="dato">
+        <span class="n">04 · Calidad</span>
+        <div class="t">Cómo salió</div>
+        <div class="d">Resultados de inspección, categorías de defecto, mediciones SPC.</div>
+        <div class="src">Sale de la tridimensional (CMM), sistemas de visión, controles manuales, laboratorio.</div>
+      </div>
+    </div>
+
+    <div class="cruce">
+      <div class="t">El valor no está en recoger — está en cruzar.</div>
+      <div class="d">Una parada (máquina) + la orden que corría (operación) + la temperatura de ese rato (proceso) + el lote que salió mal (calidad), sobre la misma línea de tiempo. Ahí aparece la causa — y el euro. Eso es lo que montamos.</div>
+    </div>
+
+    <p class="unused" style="margin-top: 26px;">
+      <span><b>¿Por qué hoy no se aprovechan?</b></span>
+      <span>· Cada dato vive en su silo</span>
+      <span>· Nada apunta a la orden de trabajo</span>
+      <span>· Se apuntan a mano, tarde y a trozos</span>
+      <span>· Nadie es dueño del conjunto</span>
+    </p>
+  </div>
+</section>
+
+<!-- ================= INTEGRACIÓN ================= -->
+<section id="integracion">
+  <div class="wrap">
+    <p class="eyebrow">Integración de datos</p>
+    <h2 style="margin-top: 10px; max-width: 720px;">Nos conectamos a todo lo que ya tienes — y extraemos los datos.</h2>
+    <p class="body-p" style="margin-top: 14px;">Máquinas, sensores, calidad, logística, tu ERP y tu MES: todo acaba en una sola base de datos unificada. Y de ahí salen los casos de uso.</p>
+
+    <div class="diagram scroll-x" style="margin-top: 44px;">
+      <svg viewBox="0 0 1000 560" role="img" aria-label="Fuentes de planta y sistemas de gestión fluyen a un data hub unificado del que salen los casos de uso">
+        <defs>
+          <marker id="harr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="arrowhead"/>
+          </marker>
+        </defs>
+        <path d="M270,64 C370,64 400,235 460,252" class="wire-dot"/>
+        <path d="M270,172 C370,172 400,255 460,270" class="wire-dot"/>
+        <path d="M270,280 C370,280 410,285 460,287" class="wire-dot"/>
+        <path d="M270,388 C370,388 400,318 460,305" class="wire-dot"/>
+        <path d="M270,496 C370,496 400,345 460,322" class="wire-dot"/>
+        <path d="M430,84 C430,135 495,160 508,203" class="wire"/>
+        <path d="M590,84 C590,135 542,160 533,203" class="wire"/>
+        <line x1="582" y1="290" x2="648" y2="290" class="wire" marker-end="url(#harr)"/>
+
+        <g>
+          <rect x="20" y="20" width="250" height="88" rx="12" class="chip-r"/>
+          <circle cx="62" cy="64" r="22" fill="var(--tint)" stroke="var(--border)" stroke-width="1.5"/>
+          <g class="icon-line"><rect x="50" y="60" width="24" height="13" rx="2"/><line x1="54" y1="53" x2="70" y2="53"/><line x1="62" y1="53" x2="62" y2="60"/></g>
+          <text x="100" y="59" font-size="16" class="lbl">Máquinas</text>
+          <text x="100" y="80" font-size="11.5" class="lbl-sub">estado · ciclos · paradas</text>
+
+          <rect x="20" y="128" width="250" height="88" rx="12" class="chip-r"/>
+          <circle cx="62" cy="172" r="22" fill="var(--tint)" stroke="var(--border)" stroke-width="1.5"/>
+          <g class="icon-line"><circle cx="62" cy="172" r="3" fill="var(--icon)" stroke="none"/><path d="M70,164 a11,11 0 0 1 0,16"/><path d="M54,180 a11,11 0 0 1 0,-16"/></g>
+          <text x="100" y="167" font-size="16" class="lbl">Sensores</text>
+          <text x="100" y="188" font-size="11.5" class="lbl-sub">temperatura · consumo</text>
+
+          <rect x="20" y="236" width="250" height="88" rx="12" class="chip-r"/>
+          <circle cx="62" cy="280" r="22" fill="var(--tint)" stroke="var(--border)" stroke-width="1.5"/>
+          <g class="icon-line"><circle cx="59" cy="277" r="8"/><line x1="65" y1="283" x2="72" y2="290"/></g>
+          <text x="100" y="275" font-size="16" class="lbl">Control de calidad</text>
+          <text x="100" y="296" font-size="11.5" class="lbl-sub">medidas · defectos</text>
+
+          <rect x="20" y="344" width="250" height="88" rx="12" class="chip-r"/>
+          <circle cx="62" cy="388" r="22" fill="var(--tint)" stroke="var(--border)" stroke-width="1.5"/>
+          <g class="icon-line"><rect x="51" y="381" width="16" height="15" rx="3"/><path d="M71,384 a8,8 0 0 1 0,9"/><path d="M76,380 a13,13 0 0 1 0,17"/></g>
+          <text x="100" y="383" font-size="14" class="lbl">RFID / código de barras</text>
+          <text x="100" y="404" font-size="11.5" class="lbl-sub">lote · trazabilidad</text>
+
+          <rect x="20" y="452" width="250" height="88" rx="12" class="chip-r"/>
+          <circle cx="62" cy="496" r="22" fill="var(--tint)" stroke="var(--border)" stroke-width="1.5"/>
+          <g class="icon-line"><path d="M62,484 l11,5.5 v11 l-11,5.5 -11,-5.5 v-11 z"/><path d="M51,489.5 L62,495 l11,-5.5"/><line x1="62" y1="495" x2="62" y2="506"/></g>
+          <text x="100" y="491" font-size="16" class="lbl">Packaging</text>
+          <text x="100" y="512" font-size="11.5" class="lbl-sub">formato · conteo</text>
+        </g>
+
+        <rect x="390" y="50" width="80" height="34" rx="17" class="chip-r"/>
+        <text x="430" y="72" font-size="14" text-anchor="middle" class="lbl">ERP</text>
+        <rect x="550" y="50" width="80" height="34" rx="17" class="chip-r"/>
+        <text x="590" y="72" font-size="14" text-anchor="middle" class="lbl">MES</text>
+
+        <path d="M460,215 a61,17 0 0 1 122,0 v112 a61,17 0 0 1 -122,0 z" fill="var(--tint)" stroke="var(--icon)" stroke-width="2"/>
+        <ellipse cx="521" cy="215" rx="61" ry="17" fill="none" stroke="var(--icon)" stroke-width="2"/>
+        <path d="M460,253 a61,17 0 0 0 122,0" fill="none" stroke="var(--icon)" stroke-width="1.5"/>
+        <path d="M460,291 a61,17 0 0 0 122,0" fill="none" stroke="var(--icon)" stroke-width="1.5"/>
+        <text x="521" y="382" font-size="17" text-anchor="middle" class="lbl">Hub de Datos de Planta</text>
+        <text x="521" y="402" font-size="12" text-anchor="middle" class="lbl-sub">base de datos unificada</text>
+
+        <rect x="660" y="40" width="320" height="500" rx="14" class="chip-r"/>
+        <circle cx="686" cy="66" r="3.5" fill="var(--line)"/>
+        <circle cx="700" cy="66" r="3.5" fill="var(--line)"/>
+        <circle cx="714" cy="66" r="3.5" fill="var(--line)"/>
+        <text x="962" y="70" font-size="10" text-anchor="end" class="lbl-sub" style="letter-spacing:2px;">CASOS DE USO</text>
+        <line x1="676" y1="86" x2="964" y2="86" stroke="var(--border)" stroke-width="1"/>
+        <g>
+          <rect x="683" y="114" width="7" height="7" transform="rotate(45 686.5 117.5)" fill="var(--ink)"/>
+          <text x="706" y="123" font-size="14.5" class="lbl">Conectividad de planta</text>
+          <line x1="676" y1="148" x2="964" y2="148" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="171" width="7" height="7" transform="rotate(45 686.5 174.5)" fill="var(--ink)"/>
+          <text x="706" y="180" font-size="14.5" class="lbl">OEE y visibilidad de producción</text>
+          <line x1="676" y1="205" x2="964" y2="205" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="228" width="7" height="7" transform="rotate(45 686.5 231.5)" fill="var(--ink)"/>
+          <text x="706" y="237" font-size="14.5" class="lbl">Gestión energética</text>
+          <line x1="676" y1="262" x2="964" y2="262" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="285" width="7" height="7" transform="rotate(45 686.5 288.5)" fill="var(--ink)"/>
+          <text x="706" y="294" font-size="14.5" class="lbl">Chat de IA con tus datos</text>
+          <line x1="676" y1="319" x2="964" y2="319" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="342" width="7" height="7" transform="rotate(45 686.5 345.5)" fill="var(--ink)"/>
+          <text x="706" y="351" font-size="14.5" class="lbl">Trazabilidad de lote y calidad</text>
+          <line x1="676" y1="376" x2="964" y2="376" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="399" width="7" height="7" transform="rotate(45 686.5 402.5)" fill="var(--ink)"/>
+          <text x="706" y="408" font-size="14.5" class="lbl">Integración planta · ERP</text>
+          <line x1="676" y1="433" x2="964" y2="433" stroke="var(--border)" stroke-width="1"/>
+          <rect x="683" y="456" width="7" height="7" transform="rotate(45 686.5 459.5)" fill="var(--ink)"/>
+          <text x="706" y="465" font-size="14.5" class="lbl">Integración máquina · MES</text>
+        </g>
+      </svg>
+    </div>
+
+    <p class="caption"><b>Cada fuente se ordena para que todos los datos estén en el mismo sitio.</b> Los casos de uso se activan por fases — empezando por el que más te duele.</p>
+  </div>
+</section>
+
+<!-- ================= TU EXCEL ================= -->
+<section id="tu-excel">
+  <div class="wrap">
+    <p class="eyebrow">Sin aprender nada nuevo</p>
+    <h2 style="margin-top: 10px; max-width: 760px;">Abres Excel, le das a «Obtener datos» — y ahí está tu planta.</h2>
+    <p class="body-p" style="margin-top: 14px;">El hub no es un programa cerrado: es una <b>base de datos estándar</b>. Cualquier herramienta que sepa leer una — Excel, Power BI, tu ERP — ve las mismas tablas: producción, paradas, energía, calidad. Sin exportes, sin esperar a que alguien te pase el informe.</p>
+
+    <div class="diagram scroll-x" style="margin-top: 44px;">
+      <svg viewBox="0 0 1000 632" role="img" aria-label="Excel abriendo la base de datos de planta: el navegador muestra las tablas produccion, paradas, alarmas y energia, y las vistas v_oee_turno y v_paradas_pareto, con una vista previa de datos de OEE">
+        <defs>
+          <pattern id="xlcells" x="58" y="198" width="92" height="26" patternUnits="userSpaceOnUse">
+            <path d="M92,0 V26 M0,26 H92" stroke="var(--border)" stroke-width="1" fill="none"/>
+          </pattern>
+          <filter id="dlgshadow" x="-20%" y="-20%" width="140%" height="150%">
+            <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A1858" flood-opacity="0.22"/>
+          </filter>
+        </defs>
+
+        <!-- ventana Excel -->
+        <rect x="20" y="16" width="960" height="590" rx="14" class="chip-r"/>
+        <circle cx="46" cy="42" r="3.5" fill="var(--line)"/>
+        <circle cx="60" cy="42" r="3.5" fill="var(--line)"/>
+        <circle cx="74" cy="42" r="3.5" fill="var(--line)"/>
+        <text x="500" y="46" font-size="12" text-anchor="middle" class="lbl-sub">Libro1 — Excel</text>
+        <line x1="20" y1="60" x2="980" y2="60" stroke="var(--border)" stroke-width="1"/>
+
+        <!-- pestañas -->
+        <g class="xl-sans" font-size="13" fill="var(--muted)">
+          <text x="48" y="88">Archivo</text>
+          <text x="116" y="88">Inicio</text>
+          <text x="172" y="88">Insertar</text>
+          <text x="240" y="88">Fórmulas</text>
+          <text x="310" y="88" fill="var(--ink)" font-weight="600">Datos</text>
+          <text x="368" y="88">Revisar</text>
+          <text x="432" y="88">Vista</text>
+        </g>
+        <rect x="308" y="94" width="41" height="2.5" fill="var(--ink)"/>
+        <line x1="20" y1="104" x2="980" y2="104" stroke="var(--border)" stroke-width="1"/>
+
+        <!-- cinta: botón Obtener datos -->
+        <rect x="44" y="118" width="150" height="52" rx="8" fill="var(--tint)" stroke="var(--ink)" stroke-width="1.5"/>
+        <g class="icon-line" stroke-width="1.6">
+          <ellipse cx="66" cy="136" rx="8" ry="3.5"/>
+          <path d="M58,136 v13 a8,3.5 0 0 0 16,0 v-13"/>
+        </g>
+        <text x="84" y="149" font-size="12.5" class="lbl">Obtener datos ▾</text>
+        <line x1="214" y1="116" x2="214" y2="170" stroke="var(--border)" stroke-width="1"/>
+        <g class="xl-sans" font-size="12" fill="var(--muted)">
+          <text x="234" y="139">Actualizar todo</text>
+          <text x="234" y="159">Consultas y conexiones</text>
+          <text x="440" y="149">Ordenar y filtrar</text>
+          <text x="600" y="149">Herramientas de datos</text>
+        </g>
+        <line x1="420" y1="116" x2="420" y2="170" stroke="var(--border)" stroke-width="1"/>
+        <line x1="580" y1="116" x2="580" y2="170" stroke="var(--border)" stroke-width="1"/>
+        <line x1="20" y1="176" x2="980" y2="176" stroke="var(--border)" stroke-width="1"/>
+
+        <!-- hoja de cálculo -->
+        <rect x="24" y="176" width="952" height="22" fill="var(--tint)" opacity=".55"/>
+        <line x1="24" y1="198" x2="976" y2="198" stroke="var(--border)" stroke-width="1"/>
+        <line x1="58" y1="176" x2="58" y2="594" stroke="var(--border)" stroke-width="1"/>
+        <g class="xl-sans" font-size="11" fill="var(--muted)" text-anchor="middle" opacity=".75">
+          <text x="104" y="191">A</text><text x="196" y="191">B</text><text x="288" y="191">C</text>
+          <text x="380" y="191">D</text><text x="472" y="191">E</text><text x="564" y="191">F</text>
+          <text x="656" y="191">G</text><text x="748" y="191">H</text><text x="840" y="191">I</text>
+          <text x="932" y="191">J</text>
+        </g>
+        <rect x="58" y="198" width="918" height="396" fill="url(#xlcells)" opacity=".6"/>
+        <g class="xl-sans" font-size="10.5" fill="var(--muted)" text-anchor="middle" opacity=".7">
+          <text x="41" y="215">1</text><text x="41" y="241">2</text><text x="41" y="267">3</text>
+          <text x="41" y="293">4</text><text x="41" y="319">5</text><text x="41" y="345">6</text>
+          <text x="41" y="371">7</text><text x="41" y="397">8</text><text x="41" y="423">9</text>
+          <text x="41" y="449">10</text><text x="41" y="475">11</text><text x="41" y="501">12</text>
+          <text x="41" y="527">13</text><text x="41" y="553">14</text><text x="41" y="579">15</text>
+        </g>
+
+        <!-- menú desplegable -->
+        <g filter="url(#dlgshadow)">
+          <rect x="44" y="174" width="190" height="86" rx="10" fill="var(--card)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="60" y="197" font-size="12.5" class="xl-sans" fill="var(--body)">Desde archivo</text>
+          <rect x="50" y="204" width="178" height="26" rx="6" fill="var(--band)"/>
+          <text x="60" y="221" font-size="12.5" class="xl-sans" font-weight="600" fill="var(--band-text)">Desde base de datos</text>
+          <text x="216" y="221" font-size="12.5" class="xl-sans" fill="var(--band-text)">▸</text>
+          <text x="60" y="247" font-size="12.5" class="xl-sans" fill="var(--body)">Desde otras fuentes</text>
+        </g>
+
+        <!-- diálogo Navegador -->
+        <g filter="url(#dlgshadow)">
+          <rect x="200" y="210" width="660" height="360" rx="12" fill="var(--card)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="224" y="241" font-size="15" class="lbl">Navegador</text>
+          <path d="M830,230 l10,10 M840,230 l-10,10" stroke="var(--muted)" stroke-width="1.6" stroke-linecap="round"/>
+          <rect x="224" y="254" width="252" height="30" rx="8" fill="var(--tint)" stroke="var(--border)" stroke-width="1"/>
+          <circle cx="240" cy="268" r="5" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <path d="M244,272 l5,5" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="258" y="273" font-size="12" class="lbl-sub">Buscar</text>
+
+          <!-- árbol: tablas y vistas -->
+          <g class="icon-line" stroke-width="1.4">
+            <ellipse cx="239" cy="303" rx="7" ry="3"/>
+            <path d="M232,303 v10 a7,3 0 0 0 14,0 v-10"/>
+          </g>
+          <text x="256" y="313" font-size="13" class="lbl">sva_planta</text>
+          <text x="330" y="313" font-size="11" class="lbl-sub">· base de datos</text>
+
+          <path d="M236,331 h8 l-4,6 z" fill="var(--muted)"/>
+          <text x="252" y="340" font-size="12.5" class="xl-sans" font-weight="600" fill="var(--ink)">Tablas</text>
+          <g class="icon-line" stroke-width="1.3">
+            <rect x="272" y="352" width="13" height="11" rx="1.5"/><line x1="272" y1="356" x2="285" y2="356"/><line x1="278" y1="356" x2="278" y2="363"/>
+            <rect x="272" y="377" width="13" height="11" rx="1.5"/><line x1="272" y1="381" x2="285" y2="381"/><line x1="278" y1="381" x2="278" y2="388"/>
+            <rect x="272" y="402" width="13" height="11" rx="1.5"/><line x1="272" y1="406" x2="285" y2="406"/><line x1="278" y1="406" x2="278" y2="413"/>
+            <rect x="272" y="427" width="13" height="11" rx="1.5"/><line x1="272" y1="431" x2="285" y2="431"/><line x1="278" y1="431" x2="278" y2="438"/>
+            <rect x="272" y="452" width="13" height="11" rx="1.5"/><line x1="272" y1="456" x2="285" y2="456"/><line x1="278" y1="456" x2="278" y2="463"/>
+          </g>
+          <g class="xl-mono" font-size="12.5" fill="var(--body)">
+            <text x="293" y="361">produccion</text>
+            <text x="293" y="386">paradas</text>
+            <text x="293" y="411">alarmas</text>
+            <text x="293" y="436">energia</text>
+            <text x="293" y="461">calidad</text>
+          </g>
+
+          <path d="M236,479 h8 l-4,6 z" fill="var(--muted)"/>
+          <text x="252" y="488" font-size="12.5" class="xl-sans" font-weight="600" fill="var(--ink)">Vistas</text>
+          <rect x="262" y="495" width="212" height="25" rx="6" fill="var(--band)"/>
+          <path d="M272,507.5 q6.5,-7 13,0 q-6.5,7 -13,0" fill="none" stroke="var(--band-text)" stroke-width="1.3"/>
+          <circle cx="278.5" cy="507.5" r="1.8" fill="var(--band-text)"/>
+          <text x="293" y="512" font-size="12.5" class="xl-mono" fill="var(--band-text)">v_oee_turno</text>
+          <path d="M272,533 q6.5,-7 13,0 q-6.5,7 -13,0" fill="none" stroke="var(--icon)" stroke-width="1.3"/>
+          <circle cx="278.5" cy="533" r="1.8" fill="var(--icon)"/>
+          <text x="293" y="537" font-size="12.5" class="xl-mono" fill="var(--body)">v_paradas_pareto</text>
+          <path d="M272,557 q6.5,-7 13,0 q-6.5,7 -13,0" fill="none" stroke="var(--icon)" stroke-width="1.3"/>
+          <circle cx="278.5" cy="557" r="1.8" fill="var(--icon)"/>
+          <text x="293" y="561" font-size="12.5" class="xl-mono" fill="var(--body)">v_consumo_energia</text>
+
+          <line x1="500" y1="300" x2="500" y2="556" stroke="var(--border)" stroke-width="1"/>
+
+          <!-- vista previa -->
+          <text x="532" y="318" font-size="13" class="xl-mono" font-weight="600" fill="var(--ink)">v_oee_turno</text>
+          <text x="836" y="318" font-size="11" text-anchor="end" class="lbl-sub">vista previa</text>
+          <rect x="532" y="330" width="304" height="26" fill="var(--band)"/>
+          <g class="xl-sans" font-size="10.5" font-weight="600" fill="var(--band-text)">
+            <text x="542" y="347">fecha</text>
+            <text x="618" y="347">máquina</text>
+            <text x="692" y="347">oee</text>
+            <text x="742" y="347">disp.</text>
+            <text x="794" y="347">rend.</text>
+          </g>
+          <rect x="532" y="380" width="304" height="24" fill="var(--tint)"/>
+          <rect x="532" y="428" width="304" height="24" fill="var(--tint)"/>
+          <g class="xl-mono" font-size="10.5" fill="var(--body)">
+            <text x="542" y="372">18/07</text><text x="618" y="372">CNC-01</text><text x="692" y="372">71%</text><text x="742" y="372">84%</text><text x="794" y="372">88%</text>
+            <text x="542" y="396">18/07</text><text x="618" y="396">CNC-02</text><text x="692" y="396">64%</text><text x="742" y="396">79%</text><text x="794" y="396">85%</text>
+            <text x="542" y="420">18/07</text><text x="618" y="420">CNC-03</text><text x="692" y="420">82%</text><text x="742" y="420">93%</text><text x="794" y="420">91%</text>
+            <text x="542" y="444">17/07</text><text x="618" y="444">CNC-01</text><text x="692" y="444">69%</text><text x="742" y="444">81%</text><text x="794" y="444">88%</text>
+            <text x="542" y="468">17/07</text><text x="618" y="468">CNC-02</text><text x="692" y="468">73%</text><text x="742" y="468">86%</text><text x="794" y="468">87%</text>
+          </g>
+          <rect x="532" y="330" width="304" height="146" fill="none" stroke="var(--border)" stroke-width="1"/>
+          <text x="532" y="498" font-size="11" class="lbl-sub">1.248 filas · actualizado hace 2 min</text>
+
+          <rect x="640" y="514" width="94" height="34" rx="17" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="687" y="536" font-size="13" text-anchor="middle" class="lbl">Cancelar</text>
+          <rect x="746" y="514" width="90" height="34" rx="17" fill="var(--band)"/>
+          <text x="791" y="536" font-size="13" text-anchor="middle" class="t-inv">Cargar</text>
+        </g>
+      </svg>
+    </div>
+
+    <p class="caption"><b>El mismo número para todos.</b> La tabla que gestión abre en su Excel es la misma que alimenta el dashboard de planta — actualizada sola, sin copiar y pegar.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a class="lockup" href="#">
+        <svg viewBox="0 12 104 74" aria-hidden="true"><g fill="currentColor"><rect x="-80" y="-80" width="260" height="260" mask="url(#ma)"></rect><g transform="translate(15.32 -12.86) translate(50 50) rotate(-40) scale(1 -1) rotate(40) translate(-50 -50)"><rect x="-80" y="-80" width="260" height="260" mask="url(#mb)"></rect></g></g></svg>
+        <span class="wm"><b>SVA</b><span>Data</span></span>
+      </a>
+      <div style="text-align: right;">
+        <div class="contact-name">Lluís Barnadas</div>
+        <div class="contact-role">Ingeniero de procesos · <a href="mailto:lluis.barnadas@svaservice.es" style="color: inherit;">lluis.barnadas@svaservice.es</a></div>
+      </div>
+    </div>
+    <div class="foot-tag">
+      <span>© 2026 SVA Data</span>
+      <span>Tu planta, tus datos.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var rotor = document.getElementById('rotor');
+  if (!rotor) return;
+  var words = ['operativos', 'de máquinas', 'de sensores', 'de órdenes', 'de mantenimiento'];
+  var i = 0;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setInterval(function () {
+    i = (i + 1) % words.length;
+    if (still) { rotor.textContent = words[i]; return; }
+    rotor.classList.add('rotor-out');
+    setTimeout(function () {
+      rotor.textContent = words[i];
+      rotor.classList.remove('rotor-out');
+    }, 300);
+  }, 2600);
+})();
+</script>
+
+</body>
+</html>
