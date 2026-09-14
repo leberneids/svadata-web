@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svadata.com/sitemap.xml
