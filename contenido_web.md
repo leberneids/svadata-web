@@ -183,7 +183,11 @@ en el repositorio del producto):
 ## ¿Quién somos? (`#quien-somos`)
 - **Titular:** Somos tu equipo de datos, experto en fabricación — por menos de lo que cuesta
   un data analyst.
-- **Tres partes:** 01 · El pipeline · 02 · El acceso · 03 · Las sesiones
+- **Tres partes:**
+  - `01 · La conexión` — El mismo método que en una multinacional · Tiempo real, histórico y lo
+    que ya guarda tu empresa — sin tocar nada de lo que funciona.
+  - `02 · El acceso` — Un sitio donde tu equipo accede a los datos.
+  - `03 · Las sesiones` — Sesiones semanales y mensuales.
 
 ## Cómo empezamos (`#empezamos`)
 - **Titular:** No te pedimos que nos creas: medimos.
