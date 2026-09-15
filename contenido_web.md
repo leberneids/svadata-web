@@ -187,16 +187,23 @@ en el repositorio del producto):
 
 ## Cómo empezamos (`#empezamos`)
 - **Titular:** No te pedimos que nos creas: medimos.
-- **Precio:** 1.000 € · un mes
+- **Píldora:** Un mes  *(sin precio: no se publican precios)*
+- **Párrafo:** Cada fábrica tiene su problema: paradas, merma, calidad, energía. Investigamos
+  y te dejamos montados los tableros, los informes automáticos y los avisos — y al cabo de un
+  mes decides.
 - **Pasos:** Día 1–2 Miramos tu fábrica · Semana 1 Tus datos, juntos · Día 30 Tu número ·
   La decisión ¿Te gusta? Seguimos
 - **Captura:** `portal-informe.webp`
 - **Pie:** El informe trae dos cosas: lo que ya hemos encontrado en tus datos, y la analítica
   que esos datos permiten.
+
+> **Nada de precios en la web** (2026-09-15). Ni cifras, ni rangos, ni «desde». El precio se
+> habla en la visita, con la fábrica delante.
 - **Banda:** Un panel de números no gana dinero. Lo que lo gana es la decisión que sale de él.
 
 ## Contacto (`#contacto`)
 - **Titular:** ¿Quieres saber tu número?
+- **Párrafo:** Un mes con tus datos, y decides con el número delante. El informe te lo quedas, sigas o no.
 - **Botones:** Ver una demo del portal · Escríbenos
 
 ---
