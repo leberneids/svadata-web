@@ -1,204 +1,249 @@
-# Contenido de la web — SVA Data
+# Contenido de la web — svadata.com
 
-> **Cómo funciona:** edita cualquier texto de este documento (los valores, no las etiquetas en negrita tipo `**Titular:**`). Cuando acabes, dile a Claude «aplica contenido_web.md» y volcará los cambios al `index.html`. Las secciones van en el mismo orden que la página. Lo que está marcado _(vacío)_ es un hueco que puedes rellenar o dejar vacío.
+Edita aquí cualquier texto y dile a Claude **«aplica contenido_web.md»**: lo vuelca al
+HTML. No hace falta tocar código.
 
----
+**Reglas de este fichero**
 
-> **Páginas:** la web tiene dos páginas — `index.html` (portada: secciones 1–7) y `servicios.html` (¿Quién somos? + Cómo empezamos + Contacto). El botón «Servicios» de la navegación lleva a la segunda.
-
-## Barra de navegación _(igual en las dos páginas)_
-
-- **Enlace 1:** ¿Qué hacemos? _(lleva a la sección «Qué hacemos» de la portada)_
-- **Enlace 2:** Servicios _(lleva a servicios.html)_
-- **Botón:** Hablemos
-
----
-
-## 1 · Hero (portada)
-
-- **Chip superior:** El Hub de Datos de Planta
-- **Titular (dos líneas fijas):** Todos tus datos `[palabra rotatoria]` ⏎ en un solo sitio.
-- **Palabras rotatorias** _(en negrita, navy)_**:** operativos · de planta · de máquinas · de sensores · de órdenes de producción · mantenimiento · calidad
-- **Subtitular (lead):** En tiempo real, con histórico, y listo para decidir.
-- **Párrafo:** Conecta cada máquina y cada sistema **una sola vez**, y usa esos datos donde hacen falta: en la pantalla de planta, en dashboards, Excel, la IA. Un **Hub de Datos de Planta**, un sitio, todos tus datos, ordenados.
-- **Botón primario:** Cómo empezamos
-- **Botón secundario:** Ver por qué
-
-**Etiquetas del diagrama (cajas alrededor de SVA):**
-ERP · Máquinas · Sensores · Robots · MES · Agentes de IA · Calidad · Histórico
-
-- **Caja central:** SVA — Todos tus datos en un sitio.
-
-### Tres pilares (debajo del hero)
-
-1. **Sin tocar nada** — Extraemos los datos de las máquinas y los sistemas que ya tienes. No cambiamos tu forma de trabajar.
-2. **Todos tus datos, en un solo sitio** — _(vacío)_
-3. **Toma decisiones, cada mes. Mide los cambios en los procesos, busca órdenes defectuosas, relaciona defectos de calidad con sensores…** — Cada mes, con los datos delante, te ayudamos a extraer el valor de tus datos.
+1. Si el HTML y este fichero discrepan, **gana el HTML**. Este documento se actualiza en el
+   **mismo commit** que el HTML, nunca en uno posterior — la versión anterior llevaba meses
+   desincronizada (numeración 7→9→8, palabras del rotor que ya no existían, etiquetas de un
+   diagrama sustituido) y dejó de ser fiable.
+2. Cada apartado lleva **el `id` real de la sección** entre paréntesis, para poder localizar
+   la deriva con `grep`.
+3. El repositorio `svadata-web` es **público**. No escribas aquí nombres de clientes,
+   precios negociados ni estrategia.
 
 ---
 
-## 2 · Cita
+## Barra de navegación
 
-> «Los sistemas de control hacen funcionar las máquinas. Nosotros hacemos funcionar las decisiones.»
+- **Enlaces:** Producto (`index.html#modulos`) · Servicios (`servicios.html`)
+- **Botón:** Hablemos → correo
 
 ---
 
-## 3 · El problema
+## 1 · Hero (`header.hero`)
+
+- **Chip:** El Hub de Datos de Planta
+- **Titular:** Todos tus datos *[palabra que rota]* en un solo sitio.
+- **Palabras que rotan** (las define el `<script>` al final de `index.html`, 5 en total):
+  operativos · de máquinas · de sensores · de órdenes · de mantenimiento
+- **Entradilla:** En tiempo real, con histórico, y lista para decidir.
+- **Párrafo:** Conectamos tus máquinas, tus sensores y tu ERP a **una sola base de datos**.
+  Tu equipo la ve en el portal, en los tableros y en su propio Excel.
+- **Botón primario:** Ver el producto → `#producto`
+- **Botón secundario:** Cómo empezamos → `servicios.html#empezamos`
+- **Línea de datos:** Siete protocolos de máquina · una base de datos · lectura, nunca escritura.
+- **Ilustración:** la isométrica de la planta. **Generada** por `assets/build_hero_iso.py`
+  — no se edita a mano, se regenera.
+
+**Tres columnas:**
+
+| Título | Texto |
+|---|---|
+| Sin tocar nada | Leemos el control. No cambiamos el programa, ni la red, ni cómo trabaja tu gente. |
+| Todo en un sitio | Máquina, proceso, calidad y ERP sobre la misma línea de tiempo. |
+| Cada mes, contigo | Una sesión al mes con los datos delante: qué cambió y qué tocar. |
+
+---
+
+## 2 · El problema (`#problema`)
 
 - **Eyebrow:** El problema
 - **Titular:** Diferentes softwares para cada departamento: ERP, MES, MOM, SCADA, mantenimiento.
-- **Párrafo:** Cada software tiene su función, pero la analítica nunca se ha hecho dentro de los softwares. Hay que extraer los datos, ordenarlos, unirlos — si no, la información se pierde en un exporte, un Excel, la memoria de alguien. Finanzas dice una cosa, producción otra, mantenimiento otra, calidad otra — y nadie sabe cuál es la verdad.
-
-**Diagrama «Hoy» (cajas):** ERP · MES · Excels · Máquinas · Sensores · Calidad
-**Diagrama «Con SVA» (cajas):** ERP · MES · Calidad · Máquinas · Sensores · Robots — centro: SVA, una sola capa, tuya
-
-- **Pie de sección:** **Conecta una vez. Decide siempre.** Cada fuente se conecta una sola vez a la capa — y cualquier pregunta se responde cruzándolas todas.
-
----
-
-## 4 · En lo que creemos
-
-- **Eyebrow:** En lo que creemos
-
-1. **Visualizar lo que ocurre en tu planta puede abrirte los ojos.** — Tu gestión sabe lo que debería pasar; tus máquinas, lo que pasa.
-2. **Tus datos ya existen. Están encerrados.** — Cada ERP, cada MES, MOM, SCADA intentan encerrarte. ¿Por qué no un sitio donde acceder a todo?
-3. **Un panel de números no gana dinero.** — Una decisión a tiempo, sí. Por eso no entregamos un dashboard y nos vamos: lo trabajamos contigo, cada mes — somos tu equipo de analítica.
-4. **Medir no debería ser un proyecto.** — Nada de implantaciones de meses: en marcha en semanas, sin parar producción y sin cambiar cómo trabaja tu gente.
+- **Párrafo:** Cada uno resuelve lo suyo y guarda sus datos donde le conviene. Nadie cruza la
+  parada con la orden que corría, ni el defecto con la temperatura de ese rato. La respuesta
+  acaba en un exporte, un Excel y la memoria de alguien.
+- **Diagrama:** dos columnas, «Hoy» (todo conectado con todo) y «Con SVA» (todo contra una
+  capa). Etiquetas: ERP · MES · Excels · Máquinas · Sensores · Calidad · Robots; caja central
+  **SVA / una sola capa, tuya**.
+- **Pie:** **Conecta una vez. Decide siempre.** Cada fuente entra una sola vez — y cualquier
+  pregunta se responde cruzándolas todas.
 
 ---
 
-## 5 · Qué hacemos
+## 3 · El producto (`#producto`)
 
-- **Eyebrow:** Qué hacemos
-- **Titular:** Capturamos los datos de tu empresa y los convertimos en decisiones.
-- **Párrafo:** Tu fábrica ya genera datos por el simple hecho de trabajar. No son una sola cosa: son cuatro familias, y cada una se captura distinto, se guarda distinto y responde a una pregunta distinta. Mezclarlas es donde descarrila la mayoría de proyectos de datos — en la primera reunión:
+- **Eyebrow:** El producto
+- **Titular:** Esto es lo que ve tu gente el lunes a las seis.
+- **Párrafo:** El portal es una web dentro de la red de la planta: sin instalar nada en los
+  puestos, sin licencia por usuario, y sin escribir jamás en el control.
+- **Captura:** `portal-planta.webp`
+- **Pie (obligatorio, no quitar):** **Capturas reales del portal con datos sintéticos**
+  (CNC-01…CNC-08, septiembre de 2026). El producto es el que ves; los números de estas
+  capturas, no.
 
-### Las cuatro familias de datos
+> El pie es la condición para poder enseñar capturas: son del producto real, con datos
+> inventados. Si algún día se enseñan datos de un cliente, hace falta su permiso por escrito.
 
-1. **01 · Máquina (MDE)** — **Lo que hace la máquina**
-   Ciclos, estados, tiempos de marcha, paros, velocidades, códigos de alarma.
-   _Fuente:_ Sale del control (CNC, PLC), de señales digitales o de un servidor OPC UA — sin tocar nada.
-2. **02 · Operación (BDE)** — **Lo que se está fabricando**
-   Estado de las órdenes, fichaje de operario, consumo de material, motivos de paro.
-   _Fuente:_ Sale del terminal de planta, del lector de códigos — o del apunte del operario.
-3. **03 · Proceso** — **En qué condiciones**
-   Temperaturas, presiones, pares de apriete, caudales, dimensiones.
-   _Fuente:_ Sale de sensores, equipos de medida y galgas en línea — los que ya tienes o los que añadimos.
-4. **04 · Calidad** — **Cómo salió**
-   Resultados de inspección, categorías de defecto, mediciones SPC.
-   _Fuente:_ Sale de la tridimensional (CMM), sistemas de visión, controles manuales, laboratorio.
+---
 
-### Banda azul (cruce)
+## 4 · Cinco piezas (`#modulos`)
 
+- **Eyebrow:** Cómo está hecho
+- **Titular:** Cinco piezas.
+- **Párrafo:** Cada una responde una pregunta distinta y todas leen la misma base de datos.
+  No son módulos que se compren por separado: es un solo sistema, y la interfaz que aparece
+  aquí es la que se instala.
+
+### 01 · Conectar
+- **Frase:** Cada máquina, cada señal, en la misma base de datos.
+- **Texto:** Leemos el control directamente: FANUC por FOCAS, DMG MORI por MTConnect, OPC UA,
+  Modbus TCP, S7, robots FANUC y Universal Robots. Un colector por planta, a 1 Hz, solo lectura.
+- **Etiquetas:** Máquina (MDE) · Operación (BDE) · Proceso · Calidad
+- **Diagrama:** fuentes → base de datos → casos de uso. La lista de casos de uso del dibujo
+  es: Conectividad de planta · OEE y visibilidad de producción · Gestión energética · Chat de
+  IA con tus datos · Trazabilidad de lote y calidad · Integración planta · ERP · Desgaste de
+  herramienta.
+
+### 02 · Supervisar
+- **Frase:** La nave entera en una pantalla, cada diez segundos.
+- **Texto:** Planta dibuja tu croquis real: estado, programa en curso, husillo y horas en
+  marcha. Las alarmas se agrupan por máquina y, sobre todo, por las que se repiten.
+- **Nota:** La utilización se mide contra las **horas de turno declaradas**, no contra el
+  reloj: una máquina que produce sola de madrugada puede pasar del 100 %, y ese es justo el
+  dato que buscas.
+- **Captura:** `portal-alarmas.webp`
+
+### 03 · Analizar
+- **Frase:** Dónde se fue el tiempo, con el denominador a la vista.
+- **Texto:** Reparto del tiempo, día a día, top de paros, ciclos, override y desgaste de
+  herramienta. Los informes semanales y mensuales se generan solos.
+- **Nota:** Los paros se **miden** solos; el motivo todavía lo pones tú. La captura por
+  operario en planta está en el backlog, no en el producto.
+- **Capturas:** `portal-analisis.webp` y `portal-herramientas.webp`
+- **Pie:** **El cambio de plaquita no lo anuncia el control.** Lo deducimos del salto en el
+  corrector de la herramienta cuando el operario la vuelve a medir — y de ahí sale la vida
+  típica y el aviso antes de que falle.
+
+### 04 · Integrar
+- **Frase:** Es una base de datos, no un programa cerrado.
+- **Texto:** Las mismas tablas que ve el portal las abre tu Excel o tu Power BI, con un rol de
+  solo lectura. Sin exportes y sin copiar y pegar.
+- **Nota:** Y tu **ERP** entra en el mismo sitio: órdenes, artículos y lotes sobre la misma
+  línea de tiempo que la máquina. Cruzar la orden con lo que hizo la máquina es lo que
+  convierte los datos en euros.
+- **Diagrama:** la maqueta de Excel abriendo «Obtener datos» contra la base de datos.
+
+### 05 · Preguntar
+- **Frase:** Tus datos, tus planos y tus pautas, en el mismo índice.
+- **Texto:** Preguntas en castellano sobre tu propia planta. Las pautas, los manuales y las
+  hojas de proceso se indexan junto a la telemetría, así que la respuesta cita la máquina y
+  la orden de las que sale.
+- **Nota:** El conocimiento que hoy vive en la cabeza de dos personas pasa a estar donde
+  cualquiera puede preguntarlo — y sigue siendo tuyo, dentro de tu base de datos.
+- **Diagrama:** documentos + histórico + órdenes → índice único → respuesta citada.
+
+### Banda de cierre de la sección
 - **Título:** El valor no está en recoger — está en cruzar.
-- **Texto:** Una parada (máquina) + la orden que corría (operación) + la temperatura de ese rato (proceso) + el lote que salió mal (calidad), sobre la misma línea de tiempo. Ahí aparece la causa — y el euro. Eso es lo que montamos.
-
-### Línea de cierre
-
-- **Pregunta:** ¿Por qué hoy no se aprovechan?
-- **Motivos:** Cada dato vive en su silo · Nada apunta a la orden de trabajo · Se apuntan a mano, tarde y a trozos · Nadie es dueño del conjunto
+- **Texto:** Una parada, la orden que corría y la temperatura de ese rato son tres datos
+  sueltos. Juntos, sobre la misma línea de tiempo, son la respuesta a por qué se paró.
 
 ---
 
-## 6 · Integración de datos
+## 5 · La instalación (`#estado`)
 
-- **Eyebrow:** Integración de datos
-- **Titular:** Nos conectamos a todo lo que ya tienes — y extraemos los datos.
-- **Párrafo:** Máquinas, sensores, calidad, logística, tu ERP y tu MES: todo acaba en una sola base de datos unificada. Y de ahí salen los casos de uso.
+- **Eyebrow:** La instalación
+- **Titular:** Una caja, una base de datos, una puerta.
+- **Párrafo:** Todo corre dentro de tu planta. No hay nube obligatoria, no hay agente en los
+  PC de nadie, y ningún dato sale de tu red si tú no quieres.
 
-**Fuentes (columna izquierda del diagrama):**
+| # | Título | Texto |
+|---|---|---|
+| 01 · En la planta | Un mini-PC industrial | Del tamaño de un libro, en el armario. Habla con los controles por la red que ya tienes y no toca la configuración de ninguna máquina. |
+| 02 · Los datos | Una base de datos estándar | PostgreSQL con extensión de series temporales. Un año de histórico, y un usuario de solo lectura para todo lo que consulte. |
+| 03 · El acceso | Una sola puerta | El portal y los tableros se abren desde cualquier navegador de tu red, con certificado. Ningún otro servicio queda expuesto. |
 
-- Máquinas — estado · ciclos · paradas
-- Sensores — temperatura · consumo
-- Control de calidad — medidas · defectos
-- RFID / código de barras — lote · trazabilidad
-- Packaging — formato · conteo
-- (píldoras arriba) ERP · MES 
+**Cifras** (sustituyen al caso de éxito que todavía no se puede enseñar; todas verificables
+en el repositorio del producto):
 
-**Centro del diagrama:** Hub de Datos de Planta — base de datos unificada
-
-**Casos de uso (panel derecho):**
-
-1. Conectividad de planta
-2. OEE y visibilidad de producción
-3. Gestión energética
-4. Chat de IA con tus datos
-5. Trazabilidad de lote y calidad
-6. Integración planta · ERP
-7. Integración máquina · MES
-
-- **Pie de sección:** **Cada fuente se ordena para que todos los datos estén en el mismo sitio.** Los casos de uso se activan por fases — empezando por el que más te duele.
+| Cifra | Texto |
+|---|---|
+| 1 Hz | sondeo al control, sin cargarlo |
+| 10 s | refresco de la vista de planta |
+| 365 días | de histórico en la caja |
+| 0 | escrituras al control, por diseño |
 
 ---
 
-## 7 · Tu Excel (ilustración «Obtener datos»)
+## 6 · Cierre (`#empezar`)
 
-- **Eyebrow:** Sin aprender nada nuevo
-- **Titular:** Abres Excel, le das a «Obtener datos» — y ahí está tu planta.
-- **Párrafo:** El hub no es un programa cerrado: es una **base de datos estándar**. Cualquier herramienta que sepa leer una — Excel, Power BI, tu ERP — ve las mismas tablas: producción, paradas, energía, calidad. Sin exportes, sin esperar a que alguien te pase el informe.
-
-**Ilustración (Navegador):**
-
-- **Base de datos:** sva_planta
-- **Tablas:** produccion · paradas · alarmas · energia · calidad
-- **Vistas:** v_oee_turno (seleccionada) · v_paradas_pareto · v_consumo_energia
-- **Nota bajo la vista previa:** 1.248 filas · actualizado hace 2 min
-
-- **Pie de sección:** **El mismo número para todos.** La tabla que gestión abre en su Excel es la misma que alimenta el dashboard de planta — actualizada sola, sin copiar y pegar.
-
----
-
-## 9 · ¿Quién somos? _(en servicios.html)_
-
-- **Eyebrow:** ¿Quién somos?
-- **Titular:** Somos tu equipo de datos, experto en fabricación — por menos de lo que cuesta un data analyst.
-- **Sub-eyebrow:** Tres partes
-
-1. **01 · El pipeline — Pipelines de datos probados en grandes multinacionales**
-   Datos en tiempo real, histórico y datos de empresa — sin tocar nada de lo que funciona.
-2. **02 · El acceso — Un sitio donde tu equipo accede a los datos**
-   Jefes de producción, calidad, logística: un solo sitio, una verdad — sin extraer datos de aquí y de allí para cruzarlos.
-3. **03 · Las sesiones — Sesiones semanales y mensuales**
-   Análisis y automatización sobre tus datos: qué pasó, qué tocar — y qué dio lo del mes pasado.
-
-- **Banda de cierre:** _(vacío)_
-
----
-
-## 8 · Cómo empezamos _(en servicios.html)_
-
-- **Eyebrow:** _(vacío)_
-- **Titular:** No te pedimos que nos creas: medimos.
-- **Píldora (precio):** 1.000 € · un mes
-- **Párrafo:** Cada fábrica tiene su problema: paradas, merma, calidad, energía. Investigamos y generamos dashboards, informes automatizados, alarmas, bases de datos donde acceder a tus datos — y al cabo de un mes decides.
-
-### Los cuatro pasos
-
-1. **Día 1–2 — Miramos tu fábrica**
-   Qué te duele y dónde están los datos: máquinas, ERP, calidad, energía — lo que haya.
-2. **Semana 1 — Tus datos, juntos**
-   Un sitio donde acceder a todos tus datos — todo junto, por primera vez. Solo lectura: no tocamos nada.
-3. **Día 30 — Tu número** _(tarjeta destacada en azul)_
-   Observamos: dashboards, avisos, exportes — la visualización de los análisis. Medido, no estimado.
-4. **La decisión — ¿Te gusta? Seguimos**
-   Y si no, el informe te lo quedas igual.
-
-- **Pie de sección:** **El informe trae dos cosas:** lo que ya hemos encontrado en tus datos, y la analítica que esos datos permiten a partir de aquí — qué preguntas podrás responder si seguimos.
-
-
----
-
-## 10 · Contacto _(en servicios.html)_
-
-- **Titular:** ¿Quieres saber tu número?
-- **Párrafo:** Un mes con tus datos, 1.000 €, y decides con el número delante. El informe te lo quedas, sigas o no.
-- **Botón:** Escríbenos
+- **Banda:** Tu planta, tus datos, tu base de datos.
+- **Botón primario:** Ver una demo del portal → correo
+- **Botón secundario:** Cómo empezamos → `servicios.html#empezamos`
 
 ---
 
 ## Pie de página
 
-- **Nombre:** Lluís Barnadas
-- **Rol:** Ingeniero de procesos · lluis.barnadas@svaservice.es
-- **Línea legal:** © 2026 SVA Data
-- **Lema:** Tu planta, tus datos.
+- Lluís Barnadas · Ingeniero de procesos · correo
+- © 2026 SVA Data · Tu planta, tus datos.
+
+---
+
+# Página «Servicios» (`servicios.html`)
+
+## ¿Quién somos? (`#quien-somos`)
+- **Titular:** Somos tu equipo de datos, experto en fabricación — por menos de lo que cuesta
+  un data analyst.
+- **Tres partes:** 01 · El pipeline · 02 · El acceso · 03 · Las sesiones
+
+## Cómo empezamos (`#empezamos`)
+- **Titular:** No te pedimos que nos creas: medimos.
+- **Precio:** 1.000 € · un mes
+- **Pasos:** Día 1–2 Miramos tu fábrica · Semana 1 Tus datos, juntos · Día 30 Tu número ·
+  La decisión ¿Te gusta? Seguimos
+- **Captura:** `portal-informe.webp`
+- **Pie:** El informe trae dos cosas: lo que ya hemos encontrado en tus datos, y la analítica
+  que esos datos permiten.
+- **Banda:** Un panel de números no gana dinero. Lo que lo gana es la decisión que sale de él.
+
+## Contacto (`#contacto`)
+- **Titular:** ¿Quieres saber tu número?
+- **Botones:** Ver una demo del portal · Escríbenos
+
+---
+
+# Capturas
+
+Todas se regeneran con **un comando**, contra el portal real con datos sintéticos:
+
+```bash
+~/.venvs/web-fetch/bin/python assets/build_shots.py
+```
+
+El runbook completo (levantar el stack, sembrar los datos) está en
+`02_Projects/00_Guias/03_desplegar_web_svadata.md`.
+
+| Fichero | Origen | Dónde aparece |
+|---|---|---|
+| `portal-planta.webp` | `/planta`, recorte `.page` | `#producto` |
+| `portal-alarmas.webp` | `/alarmas` | módulo 02 |
+| `portal-analisis.webp` | `/analisis?p=mes` | módulo 03 |
+| `portal-herramientas.webp` | `/maquinas/cnc-01?vista=herramientas&p=30`, recorte a la tabla | módulo 03 |
+| `portal-informe.webp` | `/informes` | `servicios.html` |
+| `og-planta.png` | `/planta`, 1200×630 | `og:image` de las dos páginas |
+
+**Sello de fecha:** el pie de `#producto` dice «septiembre de 2026». Cuando se regeneren las
+capturas, actualiza el mes — así se ve si están viejas en lugar de disimularlo.
+
+---
+
+# Afirmaciones y su estado
+
+Lo que la web promete, y qué hay detrás. Mantener esta tabla al día es lo que permite escribir
+con seguridad: si algo baja de categoría, el texto cambia **antes** que la conversación con el
+cliente.
+
+| Afirmación en la web | Estado |
+|---|---|
+| FANUC por FOCAS, DMG MORI por MTConnect, robots FANUC y Universal Robots | En producción — hay un colector para cada uno |
+| OPC UA | En producción, vía UMH Core |
+| Modbus TCP · S7 | Soportados por la capa de conexión; **todavía sin desplegar en cliente** |
+| Planta, Alarmas, Análisis, Informes | En producción |
+| Vida y desgaste de herramienta | En producción |
+| Excel / Power BI contra la base de datos | En producción |
+| El motivo de cada paro | **No**: se mide el paro, no la causa. La web lo dice explícitamente |
+| Integración con el ERP | Diseñada; primera implantación en curso |
+| Preguntar en castellano (módulo 05) | **En desarrollo** — decidido presentarlo como capacidad; no hay pantalla que enseñar todavía |

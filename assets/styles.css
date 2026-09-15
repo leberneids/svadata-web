@@ -64,7 +64,8 @@
   .cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
 
   /* ---- diagrams ---- */
-  .hero-grid > div, .ba > div, .steps > div, .objects > div, .beliefs > div { min-width: 0; }
+  .hero-grid > div, .ba > div, .steps > div, .objects > div, .beliefs > div,
+  .mod > div, .datos > div, .specs > div { min-width: 0; }
   svg { max-width: 100%; }
   .diagram svg { display: block; width: 100%; height: auto; }
   .chip-r { fill: var(--card); stroke: var(--border); stroke-width: 1.5; }
@@ -104,7 +105,7 @@
   /* ---- datos de producción ---- */
   .datos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
   .dato { border: 1px solid var(--border); background: var(--card); border-radius: 16px; padding: 28px 26px; box-shadow: var(--shadow); }
-  .dato .n { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); display: block; margin-bottom: 10px; }
+  .dato .n, .mod .n { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); display: block; margin-bottom: 10px; }
   .dato .t { font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
   .dato .d { font-size: 14.5px; }
   .dato .src { font-size: 13px; color: var(--muted); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
@@ -114,8 +115,52 @@
   .unused { display: flex; gap: 10px 22px; flex-wrap: wrap; margin-top: 22px; }
   .unused span { font-size: 14.5px; color: var(--muted); }
   .unused b { color: var(--ink); font-weight: 600; }
-  @media (max-width: 900px) { .datos { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { .datos { grid-template-columns: 1fr; } }
+  
+  /* ---- capturas de producto ---- */
+  /* El marco blanco es deliberado: las capturas traen el verde/ámbar/rojo de
+     los estados de máquina a una página monocroma. Encuadrarlas como foto de
+     producto deja claro que el color es del producto, no de la marca — y por
+     eso ningún color de captura se repite nunca en la UI de esta página. */
+  .shot { margin: 0; border: 1px solid var(--border); border-radius: 16px; background: var(--card); padding: 10px 10px 12px; box-shadow: var(--shadow); overflow: hidden; }
+  .shot img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); }
+  .shot-tab { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: lowercase; color: var(--muted); padding: 2px 4px 10px; }
+  .shot-stage { margin-top: 44px; padding: 28px; }
+  .hero-stat { margin-top: 26px; font-size: 14.5px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 16px; max-width: 520px; }
+
+  /* ---- módulos ---- */
+  .mods { display: grid; gap: 80px; margin-top: 56px; }
+  /* Una sola columna, la figura debajo y a todo el ancho. Se probó a dos
+     columnas alternas: en 560 px las capturas del portal (paneles densos de
+     1600 px) quedaban ilegibles, que es justo lo contrario de lo que se pide
+     a una captura. */
+  .mod { display: grid; grid-template-columns: 1fr; gap: 34px; }
+  .mod-txt { max-width: 760px; }
+  .mod .t { font-family: var(--serif); font-size: 23px; font-weight: 600; color: var(--ink); line-height: 1.28; margin-bottom: 10px; }
+  .mod .d { font-size: 15.5px; color: var(--body); }
+  .mod-note { margin-top: 16px; font-size: 14.5px; color: var(--muted); border-left: 2px solid var(--border); padding-left: 14px; }
+  .mod-note b { color: var(--ink); }
+  .mod-fig .diagram { margin-top: 0; }
+  /* Los dos módulos con diagrama ancho (1000 px de diseño) ocupan toda la
+     fila: en una columna de 560 px .scroll-x los recortaba. */
+  .mod .d, .mod-note { max-width: 660px; }
+
+  /* ---- especificaciones (la fila que sustituye al caso de éxito) ---- */
+  .specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 52px; border-top: 1px solid var(--border); padding-top: 28px; }
+  .spec .k { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--ink); }
+  .spec .v { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+
+  /* ---- banda de cierre ---- */
+  .yours .cta-row { justify-content: center; margin-top: 20px; }
+  .yours .btn-primary { background: var(--band-text); color: var(--ink); }
+  .yours .btn-ghost { color: var(--band-text); border-color: rgba(255, 255, 255, 0.42); }
+  .yours .btn-ghost:hover { background: rgba(255, 255, 255, 0.10); }
+
+  @media (max-width: 900px) {
+    .mods { gap: 60px; }
+    .specs { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .shot-stage { padding: 14px; } .datos { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) {
+    .specs { grid-template-columns: 1fr; } .datos { grid-template-columns: 1fr; } }
 
   /* ---- steps ---- */
   .h2row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
