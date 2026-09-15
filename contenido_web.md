@@ -13,6 +13,9 @@ HTML. No hace falta tocar código.
    la deriva con `grep`.
 3. El repositorio `svadata-web` es **público**. No escribas aquí nombres de clientes,
    precios negociados ni estrategia.
+4. **No se habla de bases de datos, protocolos ni de cómo está hecho por dentro.** Lo que se
+   vende es el portal: lo que el cliente ve y decide con ello. La única «base de datos» que
+   queda en la página es la del menú de Excel, porque es el menú real de Excel.
 
 ---
 
@@ -30,11 +33,11 @@ HTML. No hace falta tocar código.
 - **Palabras que rotan** (las define el `<script>` al final de `index.html`, 5 en total):
   operativos · de máquinas · de sensores · de órdenes · de mantenimiento
 - **Entradilla:** En tiempo real, con histórico, y lista para decidir.
-- **Párrafo:** Conectamos tus máquinas, tus sensores y tu ERP a **una sola base de datos**.
-  Tu equipo la ve en el portal, en los tableros y en su propio Excel.
+- **Párrafo:** Máquinas, sensores y ERP en **un solo sitio**. Tu equipo lo ve en el portal,
+  en los tableros y en su propio Excel.
 - **Botón primario:** Ver el producto → `#producto`
 - **Botón secundario:** Cómo empezamos → `servicios.html#empezamos`
-- **Línea de datos:** Siete protocolos de máquina · una base de datos · lectura, nunca escritura.
+- **Línea de datos:** En vivo y con histórico · sin instalar nada en los puestos · sin tocar tus máquinas.
 - **Ilustración:** la isométrica de la planta. **Generada** por `assets/build_hero_iso.py`
   — no se edita a mano, se regenera.
 
@@ -52,14 +55,13 @@ HTML. No hace falta tocar código.
 
 - **Eyebrow:** El problema
 - **Titular:** Diferentes softwares para cada departamento: ERP, MES, MOM, SCADA, mantenimiento.
-- **Párrafo:** Cada uno resuelve lo suyo y guarda sus datos donde le conviene. Nadie cruza la
-  parada con la orden que corría, ni el defecto con la temperatura de ese rato. La respuesta
-  acaba en un exporte, un Excel y la memoria de alguien.
+- **Párrafo:** Cada uno guarda sus datos donde le conviene, y nadie cruza la parada con la
+  orden que corría. La respuesta acaba en un exporte, un Excel y la memoria de alguien.
 - **Diagrama:** dos columnas, «Hoy» (todo conectado con todo) y «Con SVA» (todo contra una
   capa). Etiquetas: ERP · MES · Excels · Máquinas · Sensores · Calidad · Robots; caja central
   **SVA / una sola capa, tuya**.
-- **Pie:** **Conecta una vez. Decide siempre.** Cada fuente entra una sola vez — y cualquier
-  pregunta se responde cruzándolas todas.
+- **Pie:** **Conecta una vez. Decide siempre.** Cada fuente entra una vez; cualquier pregunta
+  se responde cruzándolas todas.
 
 ---
 
@@ -67,15 +69,14 @@ HTML. No hace falta tocar código.
 
 - **Eyebrow:** El producto
 - **Titular:** Esto es lo que ve tu gente el lunes a las seis.
-- **Párrafo:** El portal es una web dentro de la red de la planta: sin instalar nada en los
-  puestos, sin licencia por usuario, y sin escribir jamás en el control.
+- **Párrafo:** Una web dentro de la red de la planta: sin instalar nada en los puestos, sin
+  licencia por usuario, y sin escribir jamás en el control.
 - **Captura:** `portal-planta.webp`
-- **Pie (obligatorio, no quitar):** **Capturas reales del portal con datos sintéticos**
-  (CNC-01…CNC-08, septiembre de 2026). El producto es el que ves; los números de estas
-  capturas, no.
+- **Sin pie.** (Retirado el 2026-09-15: las capturas son del producto real con datos de
+  demostración, como las de cualquier software.)
 
-> El pie es la condición para poder enseñar capturas: son del producto real, con datos
-> inventados. Si algún día se enseñan datos de un cliente, hace falta su permiso por escrito.
+> Lo que sí sigue en pie: las capturas **nunca** llevan datos de un cliente. Se generan
+> contra el taller sintético. Enseñar los de un cliente exigiría su permiso por escrito.
 
 ---
 
@@ -83,56 +84,52 @@ HTML. No hace falta tocar código.
 
 - **Eyebrow:** Cómo está hecho
 - **Titular:** Cinco piezas.
-- **Párrafo:** Cada una responde una pregunta distinta y todas leen la misma base de datos.
-  No son módulos que se compren por separado: es un solo sistema, y la interfaz que aparece
-  aquí es la que se instala.
+- **Párrafo:** Cada una responde una pregunta distinta y todas miran los mismos datos. No se
+  compran por separado: la interfaz que ves aquí es la que se instala.
 
 ### 01 · Conectar
-- **Frase:** Cada máquina, cada señal, en la misma base de datos.
-- **Texto:** Leemos el control directamente: FANUC por FOCAS, DMG MORI por MTConnect, OPC UA,
-  Modbus TCP, S7, robots FANUC y Universal Robots. Un colector por planta, a 1 Hz, solo lectura.
+- **Frase:** Cada máquina, cada señal, en el mismo sitio.
+- **Texto:** Tus máquinas, tengan los años que tengan, y los sistemas que ya usas. Sin tocar
+  programas, sin tocar la red y sin que nadie apunte nada a mano.
+
+> **Sin lista de protocolos, a propósito** (2026-09-15). Aquí se vende el portal, no la
+> fontanería. La pregunta «¿te conectas a mi máquina?» se responde en la visita, no en la web.
 - **Etiquetas:** Máquina (MDE) · Operación (BDE) · Proceso · Calidad
-- **Diagrama:** fuentes → base de datos → casos de uso. La lista de casos de uso del dibujo
+- **Diagrama:** fuentes → el hub → casos de uso. La lista de casos de uso del dibujo
   es: Conectividad de planta · OEE y visibilidad de producción · Gestión energética · Chat de
   IA con tus datos · Trazabilidad de lote y calidad · Integración planta · ERP · Desgaste de
   herramienta.
 
 ### 02 · Supervisar
 - **Frase:** La nave entera en una pantalla, cada diez segundos.
-- **Texto:** Planta dibuja tu croquis real: estado, programa en curso, husillo y horas en
-  marcha. Las alarmas se agrupan por máquina y, sobre todo, por las que se repiten.
-- **Nota:** La utilización se mide contra las **horas de turno declaradas**, no contra el
-  reloj: una máquina que produce sola de madrugada puede pasar del 100 %, y ese es justo el
-  dato que buscas.
+- **Texto:** Tu croquis real: estado, programa en curso, husillo y horas en marcha. Las
+  alarmas, agrupadas por máquina y por las que se repiten.
+- **Nota:** La utilización va contra las **horas de turno declaradas**, no contra el reloj:
+  una máquina que produce sola de madrugada pasa del 100 %.
 - **Captura:** `portal-alarmas.webp`
 
 ### 03 · Analizar
 - **Frase:** Dónde se fue el tiempo, con el denominador a la vista.
 - **Texto:** Reparto del tiempo, día a día, top de paros, ciclos, override y desgaste de
-  herramienta. Los informes semanales y mensuales se generan solos.
-- **Nota:** Los paros se **miden** solos; el motivo todavía lo pones tú. La captura por
-  operario en planta está en el backlog, no en el producto.
+  herramienta. Los informes se generan solos.
+- **Nota:** Los paros se **miden** solos; el motivo todavía lo pones tú.
 - **Capturas:** `portal-analisis.webp` y `portal-herramientas.webp`
-- **Pie:** **El cambio de plaquita no lo anuncia el control.** Lo deducimos del salto en el
-  corrector de la herramienta cuando el operario la vuelve a medir — y de ahí sale la vida
-  típica y el aviso antes de que falle.
+- **Sin pie.** El *cómo* se deduce el cambio de plaquita **no se cuenta en la web**: se ve el
+  resultado en la captura y ya. Es nuestro, no material de marketing.
 
 ### 04 · Integrar
-- **Frase:** Es una base de datos, no un programa cerrado.
-- **Texto:** Las mismas tablas que ve el portal las abre tu Excel o tu Power BI, con un rol de
-  solo lectura. Sin exportes y sin copiar y pegar.
-- **Nota:** Y tu **ERP** entra en el mismo sitio: órdenes, artículos y lotes sobre la misma
-  línea de tiempo que la máquina. Cruzar la orden con lo que hizo la máquina es lo que
-  convierte los datos en euros.
-- **Diagrama:** la maqueta de Excel abriendo «Obtener datos» contra la base de datos.
+- **Frase:** Tus datos salen cuando los necesitas.
+- **Texto:** Lo mismo que ves en el portal lo abres en tu Excel o en tu Power BI, actualizado
+  solo. Sin exportes y sin copiar y pegar.
+- **Nota:** Tu **ERP** entra en el mismo sitio: órdenes, artículos y lotes sobre la línea de
+  tiempo de la máquina. Cruzar la orden con lo que hizo la máquina es lo que convierte datos
+  en euros.
+- **Diagrama:** la maqueta de Excel abriendo «Obtener datos» contra tus datos de planta.
 
 ### 05 · Preguntar
 - **Frase:** Tus datos, tus planos y tus pautas, en el mismo índice.
-- **Texto:** Preguntas en castellano sobre tu propia planta. Las pautas, los manuales y las
-  hojas de proceso se indexan junto a la telemetría, así que la respuesta cita la máquina y
-  la orden de las que sale.
-- **Nota:** El conocimiento que hoy vive en la cabeza de dos personas pasa a estar donde
-  cualquiera puede preguntarlo — y sigue siendo tuyo, dentro de tu base de datos.
+- **Texto:** Preguntas en castellano. Las pautas, los manuales y las hojas de proceso se
+  indexan junto a la telemetría, así que la respuesta cita la máquina y la orden.
 - **Diagrama:** documentos + histórico + órdenes → índice único → respuesta citada.
 
 ### Banda de cierre de la sección
@@ -145,15 +142,14 @@ HTML. No hace falta tocar código.
 ## 5 · La instalación (`#estado`)
 
 - **Eyebrow:** La instalación
-- **Titular:** Una caja, una base de datos, una puerta.
-- **Párrafo:** Todo corre dentro de tu planta. No hay nube obligatoria, no hay agente en los
-  PC de nadie, y ningún dato sale de tu red si tú no quieres.
+- **Titular:** Una caja en tu planta, y poco más.
+- **Párrafo:** Todo se queda dentro de tu nave. Sin nube obligatoria.
 
 | # | Título | Texto |
 |---|---|---|
-| 01 · En la planta | Un mini-PC industrial | Del tamaño de un libro, en el armario. Habla con los controles por la red que ya tienes y no toca la configuración de ninguna máquina. |
-| 02 · Los datos | Una base de datos estándar | PostgreSQL con extensión de series temporales. Un año de histórico, y un usuario de solo lectura para todo lo que consulte. |
-| 03 · El acceso | Una sola puerta | El portal y los tableros se abren desde cualquier navegador de tu red, con certificado. Ningún otro servicio queda expuesto. |
+| 01 · En la planta | Un mini-PC industrial | Habla con los controles por la red que ya tienes, sin tocar su configuración. |
+| 02 · Los datos | Un año de histórico | Todo lo que pasa queda guardado y es tuyo, sin que nadie tenga que apuntarlo. |
+| 03 · El acceso | Una sola puerta | Portal y tableros desde cualquier navegador de tu red, y nada más expuesto. |
 
 **Cifras** (sustituyen al caso de éxito que todavía no se puede enseñar; todas verificables
 en el repositorio del producto):
@@ -169,7 +165,7 @@ en el repositorio del producto):
 
 ## 6 · Cierre (`#empezar`)
 
-- **Banda:** Tu planta, tus datos, tu base de datos.
+- **Banda:** Tu planta, tus datos, en un solo sitio.
 - **Botón primario:** Ver una demo del portal → correo
 - **Botón secundario:** Cómo empezamos → `servicios.html#empezamos`
 
@@ -238,12 +234,12 @@ cliente.
 
 | Afirmación en la web | Estado |
 |---|---|
-| FANUC por FOCAS, DMG MORI por MTConnect, robots FANUC y Universal Robots | En producción — hay un colector para cada uno |
-| OPC UA | En producción, vía UMH Core |
+| FANUC por FOCAS, DMG MORI por MTConnect, robots FANUC y Universal Robots | En producción — pero **no se nombran en la web** (2026-09-15) |
+| OPC UA | En producción, vía UMH Core — tampoco se nombra |
 | Modbus TCP · S7 | Soportados por la capa de conexión; **todavía sin desplegar en cliente** |
 | Planta, Alarmas, Análisis, Informes | En producción |
 | Vida y desgaste de herramienta | En producción |
-| Excel / Power BI contra la base de datos | En producción |
+| Excel / Power BI contra los datos de planta | En producción |
 | El motivo de cada paro | **No**: se mide el paro, no la causa. La web lo dice explícitamente |
 | Integración con el ERP | Diseñada; primera implantación en curso |
 | Preguntar en castellano (módulo 05) | **En desarrollo** — decidido presentarlo como capacidad; no hay pantalla que enseñar todavía |
