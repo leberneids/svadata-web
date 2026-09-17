@@ -5,7 +5,7 @@ exactamente lo que se sirve.
 
 ```
 index.html          portada
-servicios.html      servicios
+servicios.html      redirección a /#empezamos (la página se fundió con la portada el 2026-09-17)
 assets/styles.css   estilos (único CSS)
 assets/sva-favicon.svg
 assets/build_hero_iso.py   genera la ilustración isométrica del hero

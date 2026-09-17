@@ -144,6 +144,26 @@
      fila: en una columna de 560 px .scroll-x los recortaba. */
   .mod .d, .mod-note { max-width: 660px; }
 
+  /* ---- tres niveles (2026-09-17) ---- */
+  .mod-who { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
+  .mod-list { list-style: none; margin-top: 18px; max-width: 660px; }
+  .mod-list li { padding: 9px 0; border-top: 1px solid var(--border); font-size: 15.5px; color: var(--body); }
+  .mod-list li:last-child { border-bottom: 1px solid var(--border); }
+  .mod-q { margin-top: 18px; font-family: var(--serif); font-size: 19px; font-weight: 600; color: var(--ink); }
+
+  /* ---- ejemplo ilustrativo del nivel 2 (tabla, no captura: la integración ERP aún no tiene pantalla) ---- */
+  .ex { border: 1px solid var(--border); border-radius: 16px; background: var(--card); padding: 22px 26px; box-shadow: var(--shadow); max-width: 820px; }
+  .ex-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .ex table { width: 100%; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums; }
+  .ex th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  .ex td { padding: 10px; border-bottom: 1px solid var(--border); color: var(--body); }
+  .ex td:first-child { color: var(--ink); font-weight: 600; }
+  .ex .r { text-align: right; }
+  .ex tr.hit td { background: var(--band); color: var(--band-text); }
+  .ex-note { margin-top: 14px; font-size: 14.5px; color: var(--muted); }
+  .ex-note b { color: var(--ink); }
+  .ex .scroll-x table { min-width: 520px; }
+
   /* ---- especificaciones (la fila que sustituye al caso de éxito) ---- */
   .specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 52px; border-top: 1px solid var(--border); padding-top: 28px; }
   .spec .k { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--ink); }
