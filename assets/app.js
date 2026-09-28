@@ -85,10 +85,20 @@
      Los <animateMotion> son SMIL: `prefers-reduced-motion` en CSS no los para,
      así que se retiran a mano. */
   if (quieto) {
-    document.querySelectorAll('.bp animateMotion').forEach(function (a) {
+    document.querySelectorAll('.iso animate').forEach(function (a) { a.remove(); });
+    document.querySelectorAll('.bp animateMotion, .iso animateMotion').forEach(function (a) {
       var c = a.parentNode;
       c && c.parentNode && c.parentNode.removeChild(c);
     });
+  }
+
+  /* ---- 4b. el chat de la ilustración -----------------------------------
+     El aviso de «baja» desaparece en cuanto alguien desplaza la conversación. */
+  var msg = document.getElementById('conv-msg');
+  if (msg) {
+    msg.addEventListener('scroll', function () {
+      if (msg.scrollTop > 8) document.getElementById('conv').classList.add('visto');
+    }, { passive: true });
   }
 
   /* ---- 5. el ancla del nav pegajoso --------------------------------------

@@ -191,6 +191,109 @@ nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 60;
 .mk .s { font-family: var(--sans); }
 .mk .m { font-family: var(--mono); }
 
+/* ---- la empresa en isométrico ----------------------------------------------
+   Sección propia, en el azul profundo del hero. El dibujo es un SVG generado
+   por script; el chat es HTML encima del marco dibujado, para que se pueda
+   desplazar. */
+.s-capa { background: var(--blue-deep); overflow: hidden; }
+.s-capa::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 46% at 52% 34%, rgba(59,107,255,.30), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 90% 92%, rgba(39,80,210,.14), transparent 70%); }
+.s-capa .wrap { position: relative; }
+/* El dibujo se sale del ancho de columna en pantallas grandes: gana tamaño. */
+.s-capa figure { margin-top: 20px; margin-inline: max(-90px, calc((100% - 100vw) / 2 + 20px)); }
+@media (max-width: 760px) {
+  .s-capa figure { margin-inline: 0; }
+  .iso .rot, .iso .rot-s, .iso .guia, .iso .guia-p { display: none; }
+  .iso .rot.capa { display: inline; }
+}
+.s-capa .grid-3 { margin-top: 36px; }
+.s-capa .card.principal { background: rgba(59,107,255,.12); border-color: rgba(91,130,255,.55); }
+.lienzo { position: relative; container-type: inline-size; }
+
+/* El chat: HTML encima del marco dibujado. --u es una unidad del dibujo,
+   así el texto escala con la ilustración. */
+.conv { position: absolute; --u: calc(100cqw / var(--vbw)); display: flex; flex-direction: column;
+  border-radius: calc(var(--u) * 20); overflow: hidden; color: #fff; font-family: var(--sans);
+  font-size: calc(var(--u) * 15.5); line-height: 1.38; }
+.conv-cab { display: flex; align-items: center; gap: calc(var(--u) * 10); flex: none;
+  padding: calc(var(--u) * 13) calc(var(--u) * 20); border-bottom: 1px solid rgba(191,208,255,.2);
+  font-family: var(--mono); font-size: calc(var(--u) * 11.5); font-weight: 500;
+  letter-spacing: .16em; color: #DCE5FF; }
+.conv-cab i { width: calc(var(--u) * 8); height: calc(var(--u) * 8); border-radius: 50%; background: #3ddc6b; }
+.conv-cab span { margin-left: auto; letter-spacing: .08em; color: #9DB4FF; }
+.conv-msg { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  padding: calc(var(--u) * 14) calc(var(--u) * 16) calc(var(--u) * 18);
+  display: flex; flex-direction: column; gap: calc(var(--u) * 11);
+  scrollbar-width: thin; scrollbar-color: rgba(191,208,255,.55) transparent; }
+.conv-msg:focus-visible { outline: 2px solid #BFD0FF; outline-offset: -3px; }
+.conv-msg::-webkit-scrollbar { width: 7px; }
+.conv-msg::-webkit-scrollbar-thumb { background: rgba(191,208,255,.5); border-radius: 4px; }
+.conv .q { align-self: flex-end; max-width: 86%; padding: calc(var(--u) * 8) calc(var(--u) * 16);
+  border-radius: calc(var(--u) * 18) calc(var(--u) * 18) calc(var(--u) * 5) calc(var(--u) * 18);
+  background: linear-gradient(135deg, #5A80FF, #2F5BFF); font-weight: 600; }
+.conv .r { display: grid; grid-template-columns: auto 1fr; gap: calc(var(--u) * 9); align-items: start; }
+.conv .r > b { width: calc(var(--u) * 28); height: calc(var(--u) * 28); border-radius: calc(var(--u) * 9);
+  background: #3B6BFF; display: grid; place-items: center; font-family: var(--mono);
+  font-size: calc(var(--u) * 11.5); font-weight: 500; }
+.conv .r > div { background: rgba(255,255,255,.1); border-radius: calc(var(--u) * 16);
+  padding: calc(var(--u) * 11) calc(var(--u) * 15) calc(var(--u) * 12); }
+.conv .r p + p { margin-top: calc(var(--u) * 6); }
+.conv .r strong { font-weight: 700; }
+.conv .r code { font-family: var(--mono); font-size: .88em; background: rgba(255,95,87,.22);
+  padding: 0 .35em; border-radius: .3em; color: #FFD6D3; }
+.conv .r ul { margin: calc(var(--u) * 6) 0 0; padding-left: 1.15em; }
+.conv .fu { display: flex; flex-wrap: wrap; gap: calc(var(--u) * 6); margin-top: calc(var(--u) * 9); }
+.conv .fu span { font-family: var(--mono); font-size: calc(var(--u) * 10.5); color: #DCE5FF;
+  background: rgba(255,255,255,.12); border-radius: calc(var(--u) * 7);
+  padding: calc(var(--u) * 3) calc(var(--u) * 9); }
+.conv .busca { align-self: flex-start; margin-left: calc(var(--u) * 37); font-family: var(--mono);
+  font-size: calc(var(--u) * 10.5); letter-spacing: .04em; color: #9DB4FF;
+  display: flex; align-items: center; gap: calc(var(--u) * 7); }
+.conv .busca::before { content: ""; width: calc(var(--u) * 7); height: calc(var(--u) * 7);
+  border: 1.5px solid #9DB4FF; border-radius: 50%; }
+.conv .baja { position: absolute; left: 50%; bottom: calc(var(--u) * 8); translate: -50% 0;
+  font-family: var(--mono); font-size: calc(var(--u) * 10.5); letter-spacing: .1em; color: #0B1B4D;
+  background: #DCE5FF; border-radius: 99px; padding: calc(var(--u) * 3) calc(var(--u) * 12);
+  pointer-events: none; transition: opacity .25s; }
+.conv::after { content: ""; position: absolute; inset: auto 0 0 0; height: calc(var(--u) * 64);
+  background: linear-gradient(to bottom, rgba(19,39,110,0), #13276E 62%); pointer-events: none;
+  transition: opacity .25s; }
+.conv .baja { z-index: 1; }
+.conv.visto .baja, .conv.visto::after { opacity: 0; }
+@media (max-width: 760px) {
+  .lienzo { container-type: normal; }
+  .conv { position: relative; --u: 1px; left: auto !important; top: auto !important;
+    width: 100% !important; height: 380px !important; margin-top: 20px;
+    background: #13276E; border: 1.5px solid rgba(191,208,255,.85); }
+  .iso .chat, .iso .haz { display: none; }
+}
+.iso { display: block; width: 100%; height: auto; overflow: visible; }
+.iso .junta { fill: none; stroke: rgba(255,255,255,.06); stroke-width: 1; }
+.iso .lama { fill: none; stroke: #2B3F8F; stroke-width: 1.2; }
+.iso .vidrio { opacity: .3; stroke: #DCE5FF; stroke-opacity: .7; stroke-width: 1; }
+.iso .chat { filter: drop-shadow(0 18px 36px rgba(2,6,23,.7)) drop-shadow(0 0 22px rgba(91,130,255,.45)); }
+.iso .chat-f { fill: #13276E; }
+.iso .chat-b { fill: none; stroke: #BFD0FF; stroke-opacity: .85; stroke-width: 1.5; }
+.iso .guia { stroke: #9DB4FF; stroke-width: 1; opacity: .7; }
+.iso .guia-p { fill: #DCE5FF; }
+.iso .rot-s { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; fill: #8291C0; }
+.iso .reja-l { fill: none; stroke: rgba(255,255,255,.16); stroke-width: 1; }
+.iso .rot { font-family: var(--mono); font-weight: 500; letter-spacing: .16em; fill: #DCE5FF; }
+.iso .rot.nave { fill: #fff; font-weight: 500; }
+.iso .rot.capa { fill: #DCE5FF; opacity: .85; }
+.iso .sva { font-family: var(--sans); font-weight: 700; letter-spacing: .04em; fill: #fff; }
+.iso .flujo { fill: none; stroke: #7C9BFF; stroke-opacity: .22; stroke-width: 1.2;
+  stroke-linejoin: round; }
+.iso .flujo.fab { stroke-opacity: .4; stroke-width: 1.6; }
+.iso .trazo { fill: none; stroke: #9DB4FF; stroke-opacity: .5; stroke-width: 1.2;
+  stroke-dasharray: 3 25; stroke-linecap: round; stroke-linejoin: round; }
+.iso .trazo.fab { stroke: #CFDBFF; stroke-opacity: .8; stroke-width: 1.8; }
+.iso .pulso { fill: #CFDBFF; filter: drop-shadow(0 0 5px rgba(160,190,255,.95)); }
+.iso .baliza { animation: late 2.4s ease-in-out infinite; }
+@keyframes late { 50% { opacity: .45; } }
+
 /* ---- cierre y pie ---- */
 .close { text-align: center; }
 .close .display { max-width: 18ch; margin-inline: auto; }

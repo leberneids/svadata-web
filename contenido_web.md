@@ -82,6 +82,41 @@ Sustituye a la dirección oscura del 2026-09-22 (commit `c5a798f`).
 
 ---
 
+## 2b · La empresa entera (`#empresa`) — EN PRUEBA, rama `prueba-isometrico`
+
+Sección en azul profundo, entre la cinta de fabricantes y «La plataforma».
+
+- Sin eyebrow.
+- **Titular:** Toda la empresa, en un sitio.
+- **Párrafo:** Descubre con preguntas.
+- **Ilustración:** isométrica animada. Seis salas sueltas (Administración · Oficina técnica ·
+  Mantenimiento · Calidad · Almacén) alrededor de la Fábrica, que es la nave grande. De cada
+  sala sube un flujo a la capa SVA; sobre la capa, una persona pregunta y un chat responde.
+  Generada por script; solo se mueven los datos.
+- **Chat (se puede desplazar), tres preguntas:**
+  1. ¿Por qué paró ayer CNC-03? → parada de 4 h 12 min por la alarma SP9001 (SSPA:01 MOTOR
+     OVERHEAT).
+  2. ¿Qué significa esa alarma? → según el manual: sobrecalentamiento del motor de husillo, y
+     qué revisar.
+  3. ¿Cuándo se hizo el último servicio técnico? → fecha e intervención, de los partes.
+
+| Etiqueta | Sala | Texto |
+|---|---|---|
+| La sala principal | Fábrica | Estado, ciclos, paros y alarmas de cada máquina, leídos del control sin tocar el programa. |
+| Órdenes | Oficina técnica | Qué orden y qué programa corría en cada momento. |
+| Costes | Administración | El sistema de gestión que ya usas: referencias, escandallos y costes. |
+| Medidas | Calidad | Medidas y defectos, atados a la pieza y a la máquina. |
+| Intervenciones | Mantenimiento | Qué se reparó, cuándo y cuánto estuvo parada. |
+| Material | Almacén | Lo que entra y sale, junto a lo que se fabrica. |
+
+> Al entrar esta sección, «La plataforma» pasa a fondo blanco y «Producto» a gris claro, para
+> que las franjas sigan alternando.
+>
+> **Por verificar antes de publicar:** el significado de SP9001 y la referencia del manual
+> (B-65285) están citados de memoria. Partes, fechas y horas son inventados.
+
+---
+
 ## 3 · La plataforma (`#plataforma`)
 
 - **Eyebrow:** La plataforma
@@ -208,4 +243,6 @@ al aprobar la página nueva. Si alguna hace falta, están en el historial:
 | El motivo de cada paro | **No**: se mide el paro, no la causa |
 | Cruce con el ERP (órdenes, escandallo, coste) | Diseñado; primera implantación en curso |
 | Preguntar en castellano | En el portal, sobre los datos de máquina |
+| Respuestas que citan el manual de la máquina y los partes de mantenimiento (chat de `#empresa`) | **No todavía** — visión |
+| Datos de almacén, calidad y mantenimiento en la capa (`#empresa`) | **No desplegado en cliente**; hoy en producción solo máquinas |
 | Documentos de la casa indexados (pautas, manuales) y coste en euros en las respuestas | **No todavía** — la maqueta del asistente los enseña como visión; dependen de indexar documentos y del cruce con el ERP |
