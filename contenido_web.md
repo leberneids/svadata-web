@@ -19,28 +19,26 @@ HTML. No hace falta tocar código.
 
 ---
 
-## Dirección visual (2026-09-22)
+## Dirección visual (2026-09-28)
 
-Cambio grande: la web pasa de **clara y monocroma** a **oscura con azul eléctrico**. Es una
-decisión deliberada tomada mirando a UMH, y **rompe dos reglas antiguas de marca** («light
-only», «monocromo navy sin acento»). Si se toca `07_SVA_brand_design/`, que refleje esto —
-esa carpeta todavía describe la identidad anterior.
+«Plano técnico»: **franjas alternas azul / blanco** en vez de una página oscura continua.
+Sustituye a la dirección oscura del 2026-09-22 (commit `c5a798f`).
 
-- Fondo `#070E24`, acento `#3B6BFF`, segunda nota cian `#27D2F5` solo para el dato en
-  movimiento.
-- Display en **Source Serif** a 64 px. Se probaron y descartaron *Instrument Serif*
-  (contraste de revista de moda, astas que se rompen en oscuro) y *Newsreader* (remates
-  caligráficos, aire literario). Lo profesional es el serif neutro.
-- Cuerpo en **Plus Jakarta Sans**, etiquetas en **JetBrains Mono**. Switzer queda fuera de
-  la web: la dirección aprobada se vio con Jakarta.
-- Las **capturas del portal** van sobre las únicas secciones claras de la página. Son lo
-  único con color propio y por eso destacan.
+- Azul `#0B1B4D` (hero `#071235`), acento `#2F5BFF` y **ámbar `#FFB020` solo para señalar**:
+  marcadores, cotas y llamadas, nunca superficies. Sigue rompiendo la regla de marca
+  «monocromo navy sin acento»; `07_SVA_brand_design/` todavía describe la identidad anterior.
+- Display en **Source Serif**, cuerpo en **Plus Jakarta Sans**, etiquetas y todo lo que es
+  dato en **JetBrains Mono**.
+- Las **maquetas del portal van dibujadas en SVG**, no capturadas: nítidas a cualquier
+  tamaño. El marco lleva la paleta de la web; **los estados de máquina llevan los colores
+  del portal real** (verde en marcha, azul en espera, amarillo pausa, naranja inactiva, rojo
+  parada, gris sin señal). Si el portal cambia de colores, se cambian aquí.
 
 ---
 
 ## Barra de navegación
 
-- **Enlaces:** Plataforma (`#plataforma`) · Niveles (`#niveles`) · Soluciones (`#usos`) ·
+- **Enlaces:** Plataforma (`#plataforma`) · Producto (`#producto`) · Soluciones (`#usos`) ·
   Sectores (`#sectores`)
 - **Botón:** Hablemos → correo
 
@@ -52,12 +50,19 @@ esa carpeta todavía describe la identidad anterior.
 - **Titular:** Deja de suponer. / Empieza a ver.
   *(Dos golpes cortos, registro publicitario. Sustituye a «Todos tus datos operativos en un
   solo sitio», que era una descripción, no un titular.)*
-- **Párrafo:** Un solo sitio donde entra todo lo que pasa en tu fábrica — máquinas, calidad,
-  órdenes, energía — y del que sale cualquier respuesta que necesites.
+- **Párrafo:** Un solo sitio donde entra todo lo que pasa en tu fábrica y del que sale
+  cualquier respuesta que necesites.
+  *(Las metaetiquetas `og:description` y el JSON-LD conservan la versión larga, con
+  «máquinas, calidad, órdenes, energía».)*
 - **Botones:** Ver la plataforma → `#plataforma` · Pedir una demo → correo
-- **Diagrama:** hub radial. Ocho fuentes en corona (Máquinas · Sensores · Calidad · Órdenes ·
-  Mantenimiento · Energía · Almacén · Operarios), SVA en el centro y pulsos de datos viajando
-  por los radios hacia dentro. **Generado** por el script de construcción, no a mano.
+- **Diagrama:** esquema de izquierda a derecha. **Ocho fuentes** a la izquierda (Máquinas ·
+  Sensores · Calidad · Órdenes · Mantenimiento · Energía · Almacén · Operarios), **SVA** en
+  el centro con su resplandor, y cinco salidas a la derecha (Planta en vivo · Análisis ·
+  Informes · Excel · Power BI · IA para tu planta). Cables curvos; solo se mueven los pulsos.
+- **Fuera del esquema, a propósito (2026-09-28):** la lista Fuentes / Refresco / Histórico /
+  Escrituras, el «recoge · guarda · escribe» de la caja, la cota «8 fuentes · 1 sitio ·
+  cualquier respuesta», la llamada «01 — en tu nave», los puntos fijos y todo el ámbar.
+- **Fondo:** resplandor azul difuminado detrás del esquema.
 
 > El mensaje ya no es «monitorizamos máquinas» sino **«somos el sitio donde entra todo»**.
 > Por eso desapareció la isométrica con las CNC.
@@ -86,38 +91,40 @@ esa carpeta todavía describe la identidad anterior.
 
 | # | Paso | Texto |
 |---|---|---|
-| 01 | Conectar | Leemos lo que ya tienes. Máquinas de cualquier edad, sensores, calidad y tu sistema de gestión. Sin tocar programas ni redes. |
-| 02 | Unificar | Todo queda con el mismo nombre y la misma hora. Una parada y la orden que corría dejan de ser dos datos sueltos. |
+| 01 | Conectar | Leemos lo que ya tienes: máquinas de cualquier edad, sensores, calidad y tu sistema de gestión. Sin tocar programas ni redes. |
+| 02 | Unificar | Todo con el mismo nombre y la misma hora. Una parada y la orden que corría dejan de ser dos datos sueltos. |
 | 03 | Usar | Pantallas, alarmas, informes y tu Excel de siempre. Cada equipo entra por donde le conviene, a lo mismo. |
-| 04 | Preguntar | Cuando los datos están ordenados, se les puede preguntar en castellano y la respuesta cita de dónde sale. |
+| 04 | Preguntar | Con los datos ordenados se les puede preguntar en castellano, y la respuesta cita de dónde sale. |
 
 ---
 
-## 4 · Tres niveles (`#niveles`)
+## 4 · Producto (`#producto`)
 
-Sección clara. Cada nivel: etiqueta · título · frase · lista · captura. Se contrata por
-niveles y cada uno incluye el anterior.
+- **Titular:** Empiezas viendo. Acabas preguntando.
+- Sin eyebrow y sin párrafo. **No se habla de niveles** (2026-09-28): tres bloques seguidos,
+  cada uno con título · frase · lista · maqueta.
 
-### Nivel 1 · Ver — «Tu planta, en directo.»
+### «Tu planta, en directo.»
 Qué produce, qué está parado y desde cuándo. Sin llamar a nadie y sin que nadie apunte nada
 a mano.
 La nave entera en una pantalla · Reparto del tiempo y top de paros · Alarmas agrupadas por
-las que se repiten · Vida y desgaste de herramienta · Informes semanales y mensuales solos.
-**Captura:** `portal-planta.webp`
+las que se repiten · Vida y desgaste de herramienta.
+**Maqueta:** Planta · en vivo (tiles con los colores de estado del portal).
 
-### Nivel 2 · Cruzar — «Planta y gestión, el coste real.»
-Tu ERP se queda donde está: lo leemos. Órdenes y referencias caen sobre la línea de tiempo
-de la máquina.
+### «Nos conectamos a todos tus sistemas.»
+Indexamos y ordenamos los datos. Para que tú puedas decidir.
 Tiempo real de máquina por orden · Ciclo real frente al del escandallo · Coste por pieza y
 margen por referencia · Lo que cuesta cada parada, en euros.
-**Captura:** `portal-analisis.webp`
+**Maqueta:** Análisis · el mes, con el reparto en los **seis estados** del portal (En marcha ·
+En espera · Pausa · Inactiva · Parada · Sin señal) y su leyenda en píldoras.
 
-### Nivel 3 · Preguntar — «Tu asistente de planta.»
-Las pautas, los manuales y las hojas de proceso, indexados junto a los datos. Preguntas y te
-enseña la fuente.
+### «Creamos una IA con tus datos.»
+Tus pautas, tus manuales y tus hojas de proceso, indexados junto a lo que cuentan las
+máquinas. Preguntas en castellano y te enseña de dónde sale la respuesta.
 Preguntas en lenguaje normal · El saber de la casa, dentro · Cada respuesta cita máquina y
 orden.
-**Captura:** `portal-herramientas.webp`
+**Maqueta:** Pregunta · el asistente. Dos preguntas de ejemplo sobre CNC-03 (por qué hizo
+menos piezas; cuánto ha costado), con las fuentes citadas debajo de cada respuesta.
 
 > **Nunca escribir «planificación» ni «gestión de operaciones».** Eso es un MES; SVA lee el
 > MES y el ERP, no los sustituye.
@@ -130,6 +137,8 @@ orden.
 
 Visibilidad · Paros · Utilización · Herramienta · Alarmas · Informes · Capacidad · Energía,
 cada uno con su título y una línea.
+
+- **Informes:** «Informes automatizados» — Sin pelearte con el equipo de datos.
 
 ---
 
@@ -163,16 +172,15 @@ inyección · Bienes de equipo · Alimentación y envasado.
 
 ---
 
-## Capturas
+## Maquetas
 
-Se regeneran con un comando contra el portal real y datos sintéticos:
+Las tres maquetas de `#producto` son SVG escritos dentro de `index.html`; no hay comando
+que las regenere. Llevan un taller sintético (CNC-01…09), nunca datos de un cliente.
 
-```bash
-~/.venvs/web-fetch/bin/python assets/build_shots.py
-```
+`assets/img/portal-*.webp` y `assets/build_shots.py` son de la versión anterior y ya no se
+usan en la página. `og-planta.png` sigue siendo la imagen para redes.
 
-Runbook completo: `02_Projects/00_Guias/03_desplegar_web_svadata.md`.
-Nunca llevan datos de un cliente.
+Runbook de despliegue: `02_Projects/00_Guias/03_desplegar_web_svadata.md`.
 
 ---
 
@@ -198,5 +206,6 @@ al aprobar la página nueva. Si alguna hace falta, están en el historial:
 | Planta, alarmas, análisis, herramienta, informes | En producción |
 | Excel / Power BI contra los datos de planta | En producción |
 | El motivo de cada paro | **No**: se mide el paro, no la causa |
-| Cruce con el ERP (nivel 2) | Diseñado; primera implantación en curso |
-| Preguntar en castellano (nivel 3) | **En desarrollo** — se presenta como capacidad, no hay pantalla que enseñar |
+| Cruce con el ERP (órdenes, escandallo, coste) | Diseñado; primera implantación en curso |
+| Preguntar en castellano | En el portal, sobre los datos de máquina |
+| Documentos de la casa indexados (pautas, manuales) y coste en euros en las respuestas | **No todavía** — la maqueta del asistente los enseña como visión; dependen de indexar documentos y del cruce con el ERP |

@@ -85,8 +85,9 @@
      Los <animateMotion> son SMIL: `prefers-reduced-motion` en CSS no los para,
      así que se retiran a mano. */
   if (quieto) {
-    document.querySelectorAll('.hub-svg animateMotion').forEach(function (a) {
-      a.parentNode && a.parentNode.removeChild(a.parentNode);
+    document.querySelectorAll('.bp animateMotion').forEach(function (a) {
+      var c = a.parentNode;
+      c && c.parentNode && c.parentNode.removeChild(c);
     });
   }
 
